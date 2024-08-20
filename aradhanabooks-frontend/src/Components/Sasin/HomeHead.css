@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+
+.SR-head {
+    background-color: #F7F6F6;
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.SR-head1 {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    padding: 25px;
+}
+
+.SR-headimg {
+    width: 200px;
+    height: 150px;
+}
+
+.SR-headtitleSet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.SR-headtitle {
+    font-size: 55px;
+    font-family: kanit;
+    margin: 0;
+    margin-bottom: -10px;
+}
+
+.SR-headsubtitle {
+    font-size: 25px;
+    margin: 0;
+}
+
+.SR-headtitleSet2 {
+    margin-right: 20px;
+}
+
+.SR-topsection,
+.SR-bottomsection {
+    display: flex;
+    justify-content: space-between;
+    background-color: #A9F5BC;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.SR-icon {
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    background-size: cover;
+}
+
+.SR-icon:hover {
+    background-color: #FFFFFF;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.SR-phoneicon {
+    width: 35px;
+    height: 35px;
+}
+
+.SR-phonenumber {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin: 5px 10px 0px 10px;
+}
+
+.SR-phonenumber:hover {
+    color: #e60707;
+}
+
+/* Navigation bar */
+.SR-headNav {
+    width: 100%;
+    background-color: #E90074;
+}
+
+.SR-headul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.SR-headli {
+    float: left;
+}
+
+
+.SR-headlink {
+    display: block;
+    color: #F5F7F8;
+    font-size: 22px;
+    font-family: viga;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.SR-headlink:hover {
+    background-color: #059212;
+    color: #F5F7F8;
+}
+
+
+
+
