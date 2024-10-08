@@ -46,11 +46,13 @@ const reviewsRouter = require("./routes/Iresha/review.js");
 app.use("/review", reviewsRouter);
 
 //KIshara
-
-
+const trackRoutes = require('./routes/KIshara/track.js');
+app.use('/track', trackRoutes);
+const inquiryRoutes = require("./routes/KIshara/inquiryRoutes.js");
+app.use("/api", inquiryRoutes);
 
 //Malitha
-const authRoutes = require('./routes/Malitha/auth.js'); // Import the auth routes
+const authRoutes = require('./routes/Malitha/auth.js');
 app.use('/api/auth', authRoutes);
 const loyaltyDiscountRoutes = require('./routes/Malitha/loyaltyDiscount.js');
 app.use('/api/loyalty-discount', loyaltyDiscountRoutes);
@@ -62,7 +64,6 @@ app.use('/api', router);
 //Ishara
 const addressRouter = require('./routes/Ishara/address');
 app.use('/addresses', addressRouter);
-         //path       //router
 const orderRoutes = require('./routes/Ishara/order');
 app.use('/api/orders', orderRoutes);
 const refundsRoute = require('./routes/Ishara/refunds');

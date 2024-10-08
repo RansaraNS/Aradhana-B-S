@@ -29,6 +29,7 @@ router.post('/create', async (req, res) => {
   }
 });
 
+
 router.get('/', async (req, res) => {
   try {
     const orders = await Order.find().populate('items.item');
@@ -39,7 +40,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-
 // Get sales overview
 router.get('/sales-overview', async (req, res) => {
   try {
@@ -47,6 +47,8 @@ router.get('/sales-overview', async (req, res) => {
     const orders = await Order.find()
       .populate('items.item', 'itemName itemPrice itemPicture oemName'); // Populate with necessary fields
     
+
+
     // Calculate total revenue
     const totalRevenue = orders.reduce((acc, order) => acc + order.total, 0);
 
@@ -56,6 +58,8 @@ router.get('/sales-overview', async (req, res) => {
     // Group sales by month
     const salesByMonth = orders.reduce((acc, order) => {
       const month = new Date(order.createdAt).toLocaleString('default', { month: 'short' });
+      
+      
       if (!acc[month]) acc[month] = 0;
       acc[month] += order.total;
       return acc;
@@ -86,14 +90,14 @@ router.get('/sales-overview', async (req, res) => {
   }
 });
 
-
-
-
-
 // Mark order as received
 router.patch('/:id/mark-received', async (req, res) => {
   try {
     const order = await Order.findByIdAndUpdate(req.params.id, { status: 'Received' }, { new: true });
+    
+    
+    
+    
     if (!order) {
       return res.status(404).json({ message: 'Order not found' });
     }
@@ -109,6 +113,9 @@ router.patch('/:id/mark-received', async (req, res) => {
 router.patch('/:id/request-refund', async (req, res) => {
   try {
     const order = await Order.findByIdAndUpdate(req.params.id, { refundRequested: true }, { new: true });
+    
+    
+    
     if (!order) {
       return res.status(404).json({ message: 'Order not found' });
     }
@@ -120,10 +127,7 @@ router.patch('/:id/request-refund', async (req, res) => {
 });
 
 
-
-
-
-
+///////////////TRACKIN PORTAL/////////
 
 
 // GET: Fetch all pending orders
@@ -140,6 +144,7 @@ router.get("/pending", async (req, res) => {
 router.get("/order/:id", async (req, res) => {
   try {
     const order = await Order.findById(req.params.id).populate("items.item");
+    
     if (!order) {
       return res.status(404).json({ error: "Order not found" });
     }
@@ -148,6 +153,8 @@ router.get("/order/:id", async (req, res) => {
     res.status(500).json({ error: "Error fetching order" });
   }
 });
+
+
 
 // Backend: routes/orders.js or similar
 router.put("/moveToTrack/:id", async (req, res) => {
@@ -189,6 +196,7 @@ router.put("/moveToTrack/:id", async (req, res) => {
   }
 });
 
+
 // GET: Fetch all "In Progress" orders with item details
 router.get("/in-progress", async (req, res) => {
   try {
@@ -203,23 +211,162 @@ router.get("/in-progress", async (req, res) => {
   }
 });
 
-
-
-
-// GET: Display all tracking records
-router.get("/tracking", async (req, res) => {
+//Complete Orders
+router.put('/:orderId/complete', async (req, res) => {
+  const { orderId } = req.params;
   try {
-    const trackingRecords = await Track.find().populate("order"); // Populate the order details
-    res.json(trackingRecords);
+    const updatedOrder = await Order.findByIdAndUpdate(
+      orderId,
+      { status: '', completed: true }, // Clear status and mark as completed
+      { new: true } // Return the updated document
+    );
+    res.status(200).json(updatedOrder);
   } catch (error) {
-    console.error("Error fetching tracking records:", error);
-    res.status(500).json({ message: "Error fetching tracking records" });
+    console.error('Error updating order:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
+
+
+// Cancel order endpoint
+router.put('/cancel/:id', async (req, res) => {
+  try {
+    const orderId = req.params.id;
+    const updatedOrder = await Order.findByIdAndUpdate(
+      orderId,
+      { status: 'Cancelled' }, // Change status to 'Cancelled'
+      { new: true } // Return the updated document
+    );
+
+    if (!updatedOrder) {
+      return res.status(404).send('Order not found');
+    }
+
+    res.status(200).json(updatedOrder);
+  } catch (err) {
+    res.status(500).send('Server Error');
   }
 });
 
 
-// PUT route to mark an order as completed
-// Route to mark an order as completed
+// Route to get canceled orders
+router.get('/canceled', async (req, res) => {
+  try {
+    const canceledOrders = await Order.find({ status: 'Cancelled' }); // Adjust the status value if necessary
+    res.status(200).json(canceledOrders);
+  } catch (err) {
+    console.error("Error fetching canceled orders:", err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+
+
+// Get all orders with status "Received"
+router.get("/status/received", async (req, res) => {
+  try {
+    const receivedOrders = await Order.find({ status: "Received" });
+    res.json(receivedOrders);
+  } catch (error) {
+    console.error("Error fetching received orders:", error);
+    res.status(500).json({ message: "Error fetching received orders" });
+  }
+});
+
+
+
+//Sending mail for cancel order customers
+router.post('/send-email', async (req, res) => {
+  const { email, message } = req.body;
+
+  // Set up your email transporter
+  const transporter = nodemailer.createTransport({
+    service: 'gmail', // Example for Gmail
+    auth: {
+      user: 'your-email@gmail.com',
+      pass: 'your-email-password',
+    },
+  });
+
+  const mailOptions = {
+    from: 'your-email@gmail.com',
+    to: email,
+    subject: 'Order Cancellation Notification',
+    text: message,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: 'Email sent successfully' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ message: 'Failed to send email' });
+  }
+});
+
+// Fetch all orders sorted by updated date
+router.get("/tracking/all", async (req, res) => {
+  try {
+    const orders = await Order.find().sort({ updatedAt: -1 }); // Sort by updatedAt (newest first)
+    res.json(orders); // Send all orders, including their status/stage to the frontend
+  } catch (error) {
+    res.status(500).json({ message: "Server Error", error });
+  }
+});
+
+// GET: Fetch a specific order by ID with item details
+router.get("/order/status/:id", async (req, res) => {
+  try {
+    const order = await Order.findById(req.params.id).populate("items.item");
+    if (!order) {
+      return res.status(404).json({ error: "Order not found" });
+    }
+    res.json(order);
+  } catch (error) {
+    res.status(500).json({ error: "Error fetching order" });
+  }
+});
+
+
+
+//Calculation
+
+const getPendingOrderCount = async () => {
+  const count = await Order.countDocuments({ status: 'Pending' });
+  return count;
+};
+
+const getInProgressOrderCount = async () => {
+  const count = await Order.countDocuments({ status: 'In Progress' });
+  return count;
+};
+
+const getCompletedOrderCount = async () => {
+  const count = await Order.countDocuments({ status: 'Received' });
+  return count;
+};
+
+const getCancelledOrderCount = async () => {
+  const count = await Order.countDocuments({ status: 'Cancelled' });
+  return count;
+};
+
+router.get('/stageCounts', async (req, res) => {
+  try {
+    const stageCounts = {
+      pending: await getPendingOrderCount(),
+      inProgress: await getInProgressOrderCount(),
+      completed: await getCompletedOrderCount(),
+      cancelled: await getCancelledOrderCount(),
+    };
+    res.json(stageCounts);
+  } catch (error) {
+    console.error("Error fetching stage counts:", error); // Log the error to console
+    res.status(500).json({ message: "Server error", error: error.message }); // Return the error message
+  }
+});
 
 
 

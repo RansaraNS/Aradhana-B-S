@@ -1,0 +1,51 @@
+/* TrackingAllOrders.css */
+.Chamu_allOrdersContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .Chamu_heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .Chamu_descriptionAdd {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .Chamu_ordersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .Chamu_ordersTable th,
+  .Chamu_ordersTable td {
+    padding: 12px;
+    border: 1px solid #44b54a;
+    text-align: left;
+  }
+  
+  .Chamu_ordersTable th {
+    background-color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  .Chamu_ordersTable tbody tr:nth-child(even) {
+    background-color: #59f9614c ;
+  }
+  
+  .Chamu_ordersTable tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .Chamu_noOrders {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+  }
+  

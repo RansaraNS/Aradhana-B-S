@@ -1,0 +1,151 @@
+/* Container for the entire page */
+.Chamu_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../../Images/HomeAdmin.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+/* Styling for the title aligned to the right */
+.Chamu_titleHome {
+  font-size: 3.5rem;
+  color: black;
+  margin-bottom: 10px;
+  text-shadow: 5px 2px 5px rgba(96, 173, 86, 0.815);
+  position: relative;
+  align-self: flex-end;
+  margin-right: 80px;
+  margin-top: 2px;
+
+}
+
+/* Styling for the description under the title */
+.Chamu_descriptionHome {
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 700px;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 50px;
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 20px;
+
+}
+
+@media (max-width: 768px) {
+  .Chamu_title {
+    font-size: 2.5rem;
+    margin-right: 20px;
+  }
+
+  .Chamu_description {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+
+/* Styling for the button */
+.Chamu_buttonHome {
+  position: relative;
+  margin-left: 800px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 10px;
+  background-color: #0e450e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.Chamu_buttonHome:hover {
+  background-color: #219e21b0;
+  position: relative;
+}
+
+/* Styling for the search input container */
+.Chamu_searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Styling for the search input field */
+.Chamu_searchInput {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 10px;
+  position: relative;
+  margin-left: 800px;
+  
+}
+
+/* Styling for the search button */
+.Chamu_searchButton {
+  
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Chamu_searchButton:hover {
+  background-color: #13511d;
+}
+
+/* Styling for the status container that shows the current order status */
+.Chamu_statusContainer {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #333;
+  width: fit-content;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .Chamu_searchInput {
+    width: 200px;
+  }
+
+  .Chamu_button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .Chamu_searchButton {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+.Chamu_statusContainer2{
+  border: solid rgb(60, 110, 71);
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  margin-left: 820px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

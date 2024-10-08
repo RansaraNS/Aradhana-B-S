@@ -1,0 +1,87 @@
+/* Background image for the entire page outside the form */
+.Chamu_pageBackground {
+  background-image: url('../../Images/wall3.jpg'); /* Replace with the actual image URL */
+  background-size: 65%; /* Slightly reduce the size of the background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 50px 0; /* Adds space around the form */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* To ensure stacking order */
+}
+
+.Chamu_backgroundOverlay_chamuu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit; /* Use the same background as the container */
+  background-size: inherit;
+  background-repeat: inherit;
+  background-position: inherit;
+  filter: blur(3px); /* Apply blur only to this overlay */
+  z-index: 0; /* Ensure this layer is behind the form */
+}
+
+/* Form container, centered with its own background */
+.Chamu_orderDetail_form {
+  max-width: 550px; /* Set max-width to match the form's width */
+  margin: 0 auto;
+  height: 450px; /* Height of the form */
+  width: 100%; /* Set width to 100% for responsiveness */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(249, 249, 249, 0.9); /* Light background with transparency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  z-index: 1; /* Ensure form stays on top of blurred background */
+  position: relative; /* To isolate from the blurred background */
+}
+
+/* Heading for the order details */
+.Chamu_orderDetail_form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Paragraphs for displaying order details */
+.Chamu_orderDetail_form p {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Button styling for Go Back and Inquiry buttons */
+.Chamu_backButtonDetail,
+.Chamu_inquiryButton {
+  padding: 15px 30px; /* Increased padding for buttons */
+  background-color: #79133e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease;
+  width: 45%; /* Set button width to be consistent */
+}
+
+/* Hover effect for the buttons */
+.Chamu_backButtonDetail:hover,
+.Chamu_inquiryButton:hover {
+  background-color: #d03777;
+}
+
+/* Button container to align buttons horizontally */
+.Chamu_buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}

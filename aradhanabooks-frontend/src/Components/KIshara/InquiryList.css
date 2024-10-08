@@ -1,0 +1,53 @@
+.Chamu_inquiryListContainer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .Chamu_inquiryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusts to 2 columns or more */
+    gap: 20px;
+  }
+  
+  .Chamu_inquiryBox {
+    background-color: #f9f9f9; /* Light background for the inquiry box */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .Chamu_inquiryBox.read {
+    background-color: #c8e6c9; /* Light green background for read inquiries */
+  }
+  
+  .Chamu_buttonGroup {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 10px; /* Space above button group */
+  }
+  
+  .Chamu_buttonGroup button {
+    background-color: #0f810f; /* Base color for buttons */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for buttons */
+    padding: 8px 12px; /* Padding inside buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+  }
+  
+  .Chamu_buttonGroup button:hover {
+    background-color: #0b6410; /* Darker shade for hover effect */
+  }
+  
+  h2 {
+    text-align: center; /* Center the header */
+  }
+  .Chamu_List{
+    border-style:solid ;
+    border-color: #0b6410;
+    background-color: #000000e6;
+    color: #ffffff;
+  }

@@ -35,7 +35,7 @@ const HomeHead = () => {
                     <li className='SR-headli'> <a className='SR-headlink' href='/review/add'> Ratings </a> </li>
                     <li className='SR-headli'> <a className='SR-headlink' href='/wcform'> Whole Sale </a> </li>
                     <li className='SR-headli'> <a className='SR-headlink' href='/complaint/add'> Complain </a> </li>
-                    <li className='SR-headli'> <a className='SR-headlink' href='/tracking'> Tracking Portal </a> </li>
+                    <li className='SR-headli'> <a className='SR-headlink' href='/CusTrack'> Tracking Portal </a> </li>
                     <li className='SR-headli'> <a className='SR-headlink' href='/discount-page'> Loyalty Discount </a> </li>
                     <li className='SR-headli'> <a className='SR-headlink' href='/aboutus'> About Us </a> </li>
                 </ul>

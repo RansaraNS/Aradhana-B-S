@@ -1,0 +1,89 @@
+/* CompleteOrders.css */
+
+/* Container for the complete orders page */
+.Chamu_completeOrdersContainer {
+    margin: 30px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .Chamu_heading {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Description */
+  .Chamu_descriptionAdd {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* Table styles */
+  .Chamu_ordersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .Chamu_ordersTable th, .Chamu_ordersTable td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .Chamu_ordersTable th {
+    background-color: green;
+    font-weight: bold;
+  }
+  
+  .Chamu_tableRow:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .Chamu_tableCell {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Status text for Completed orders */
+  .Chamu_completedStatus {
+    font-weight: bold;
+    color: green;
+  }
+  
+  /* Button styles */
+  .Chamu_viewButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .Chamu_viewButton:hover {
+    background-color: #45a049;
+  }
+  
+  /* No orders message */
+  .Chamu_noOrders {
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+  }
+  
+  .Chamu_orderCount2{
+
+    font-weight: bold;
+    font-size: 18px;
+}

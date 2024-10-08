@@ -25,7 +25,7 @@ const AdminHead = () => {
                     <li className="SR-AHeadNav3li"> <a className="SR-AHeadNav3Link" href="/admin/complaints"> COMPLAIN </a> </li>
                     <li className="SR-AHeadNav3li"> <a className="SR-AHeadNav3Link" href="/sales-overview"> SALES </a> </li>
                     <li className="SR-AHeadNav3li"> <a className="SR-AHeadNav3Link" href="/admin/review/display"> RATINGS </a> </li>
-                    <li className="SR-AHeadNav3li"> <a className="SR-AHeadNav3Link" href="example.com"> TRACKING </a> </li>
+                    <li className="SR-AHeadNav3li"> <a className="SR-AHeadNav3Link" href="/tracking"> TRACKING </a> </li>
                     <li className="SR-AHeadNav3li"> <a className="SR-AHeadNav3Link" href="/expenses"> EXPENSES </a> </li>
                     <li className="SR-AHeadNav3li"> <a className="SR-AHeadNav3Link" href="/delivery"> DELIVERY </a> </li>
                     <li className="SR-AHeadNav3li"> <a className="SR-AHeadNav3Link" href="/discount-manager"> DISCOUNT </a> </li>

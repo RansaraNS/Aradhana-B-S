@@ -39,7 +39,8 @@ router.route('/items').get((req, res) => {
             res.status(500).json({ success: false, error: "Error fetching items" });
         });
 });
-// i changed this one to put method
+
+//piyumal changed this one to put method
 router.put('/updateitem/:id', async (req, res) => {
     let itemId = req.params.id;
     const { itemCode, itemName, itemCategory, itemQuantity, itemPrice, itemReceivedDate, itemPicture } = req.body;

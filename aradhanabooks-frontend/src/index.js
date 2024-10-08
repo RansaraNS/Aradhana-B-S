@@ -31,6 +31,24 @@ import ReviewDisplay from "./Pages/Iresha/ReviewDisplay";
 import ReviewDisplayAdmin from "./Pages/Iresha/ReviewDisplayAdmin";
 import ConditionAndTerms from "./Pages/Iresha/ConditionAndTerms";
 
+import TrackHome from "./Pages/KIshara/TrackHome.js";
+import AdminOrderCancel from "./Pages/KIshara/AdminOrderCancel";
+import AdminSendEmail from "./Pages/KIshara/AdminSendEmail";
+import AdminTrackAllorder from "./Pages/KIshara/AdminTrackAllOrder";
+import AdminTrackAllOrders from "./Pages/KIshara/AdminTrackAllOrders";
+import AdminTrackReport from "./Pages/KIshara/AdminTrackReport";
+import AdminTrackInquiry from "./Pages/KIshara/AdminInquiry";
+import AdminCompleOrders from "./Pages/KIshara/AdminCompleOrders";
+import AdminInProgress from "./Pages/KIshara/AdminInProgress";
+import AdminPendingOrders from "./Pages/KIshara/AdminPendingOrders";
+import AdminPendingOrderDetails from "./Pages/KIshara/AdminPendingOrderDetails";
+import CusInquiryDetail from "./Pages/KIshara/CusInquiryDetail";
+import CusTrackOrderDetail from "./Pages/KIshara/CusTrackOrderDetail";
+import CusTrackHome from "./Pages/KIshara/CusTrackHome";
+import CusTrackInquiryForm from "./Pages/KIshara/CusTrackInquiryForm";
+import CusUpdateInquiryForm from "./Pages/KIshara/CusUpdateInquiryForm";
+import CusTrackPortal from "./Pages/KIshara/CusTrackPortal";
+
 //import NavBar from './Components/Malitha/NavBar.js';
 import CustomerLogin from './Components/Malitha/Auth/CustomerLogin.js';
 import StaffLogin from './Components/Malitha/Auth/StaffLogin.js';
@@ -103,6 +121,24 @@ root.render(
       <Route path="/review/display" element={<ReviewDisplay />} />
       <Route path="/admin/review/display" element={<ReviewDisplayAdmin />} />
       <Route path="/terms" element={<ConditionAndTerms/>}/>
+
+      <Route path="/tracking" element={<TrackHome />} />
+      <Route path="/report" element={<AdminTrackReport />} />
+      <Route path="/CusHome" element={<CusTrackHome />} />
+      <Route path="/CusTrack" element={<CusTrackPortal />} />
+      <Route path="/PendingOrders" element={<AdminPendingOrders />} />
+      <Route path="/order/:id" element={<AdminPendingOrderDetails />} />
+      <Route path="/in-progress" element={<AdminInProgress />} />
+      <Route path="/cancel" element={<AdminOrderCancel />} />
+      <Route path="/send-email" element={<AdminSendEmail />} />
+      <Route path="/alltracking" element={<AdminTrackAllOrders />} />
+      <Route path="/order/status/:id" element={<AdminTrackAllorder />} />
+      <Route path="/completed" element={<AdminCompleOrders />} />
+      <Route path="CusOrderDetail" element={<CusTrackOrderDetail />} />
+      <Route path="/track-inquiry" element={<CusTrackInquiryForm />} />
+      <Route path="/inquiries" element={<AdminTrackInquiry />} />
+      <Route path="/inquiry/:id" element={<CusInquiryDetail />} />
+      <Route path="/inquiry/update/:id" element={<CusUpdateInquiryForm />} />
 
       <Route path='/login' element={<CustomerLogin />} />
       <Route path="/staff-login" element={<StaffLogin />} />

@@ -30,8 +30,7 @@ const ItemSchema = new Schema({
         type: String,
         required: true
     },
-
-})
+});
 
 const Item = mongoose.model("Item", ItemSchema);
 

@@ -1,0 +1,84 @@
+.Chamu_custrack_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh;
+    background-color: #ffbae3a7; /* Background color */
+    font-family: 'Arial', sans-serif;
+}
+
+.Chamu_Upper_Part {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.Chamu_cus_image2 {
+    margin-right: 20px;
+    width: 500px; /* Adjust as necessary */
+    height: 800px; /* Adjust as necessary */
+}
+
+.Chamu_content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 80px;
+    margin-left: 20px; /* Adjust spacing as necessary */
+    max-width: 60%;
+}
+
+.Chamu_cus_title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Title color */
+    margin-bottom: 10px;
+    text-align: right; /* Align text to the right */
+}
+
+.Chamu_cus_intro {
+    font-size: 1rem;
+    color: #555; /* Description color */
+    text-align: right; /* Align text to the right */
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.Chamu_searchContainerCus {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align button and input to the right */
+    margin-bottom: 20px;
+}
+
+.Chamu_searchInputCus {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; /* Adjust width as necessary */
+}
+
+.Chamu_searchButtonCus {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #79133e; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Chamu_searchButtonCus:hover {
+    background-color: #a11e4d; /* Darker shade for hover effect */
+}
+
+.Chamu_errorMessageCus {
+    color: red; /* Error message color */
+    text-align: right; /* Align error message to the right */
+    margin-top: 10px;
+}
