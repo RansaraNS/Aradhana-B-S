@@ -1,11 +1,14 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Customer = require('../../models/Malitha/Customer'); // Adjust the path as necessary
 const Staff = require('../../models/Malitha/Staff'); // Adjust the path as necessary
 const Admin = require('../../models/Malitha/Admin'); // Adjust the path as necessary
 
 const router = express.Router();
+
+const JWT_SECRET = 'your_jwt_secret';
 
 // Helper function to validate required fields
 const validateFields = (fields) => {
@@ -26,7 +29,7 @@ router.post('/register', async (req, res) => {
             return res.status(400).json({ message: 'Email is already registered' });
         }
 
-        const hashedPassword = await bcrypt.hash(password, 10);
+        const hashedPassword = await bcryptjs.hash(password, 10);
 
         const newCustomer = new Customer({
             name,
@@ -141,7 +144,7 @@ router.post('/login', async (req, res) => {
         const customer = await Customer.findOne({ email });
         if (!customer) return res.status(404).json({ message: 'User not found' });
 
-        const isMatch = await bcrypt.compare(password, customer.password);
+        const isMatch = await bcryptjs.compare(password, customer.password);
         if (!isMatch) return res.status(401).json({ message: 'Invalid credentials' });
 
         const token = jwt.sign({ id: customer._id }, 'your_jwt_secret', { expiresIn: '1h' });

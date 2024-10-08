@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./WcReqForm.css";
 
@@ -10,6 +11,7 @@ function WcReqForm() {
   const [customeraddress, setCustomerAddress] = useState("");
   const [description, setDescription] = useState("");
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const newErrors = {};
@@ -24,17 +26,12 @@ function WcReqForm() {
       newErrors.customeremail = "Email must contain an '@' symbol.";
     } else if (!customeremail.endsWith(".com")) {
       newErrors.customeremail = "Email must end with '.com'.";
-    } else if (
-      !customeremail.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,24}$/)
-    ) {
-      newErrors.customeremail =
-        "Please enter a valid email address (e.g., example@domain.com).";
+    } else if (!customeremail.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,24}$/)) {
+      newErrors.customeremail = "Please enter a valid email address (e.g., example@domain.com).";
     }
-    
 
     if (!customerphone.match(/^0\d{9}$/)) {
-      newErrors.customerphone =
-        "Phone number should be exactly 10 digits and start with 0.";
+      newErrors.customerphone = "Phone number should be exactly 10 digits and start with 0.";
     }
 
     if (!companyName.match(/^[A-Za-z\s]+$/)) {
@@ -71,7 +68,7 @@ function WcReqForm() {
 
     axios
       .post("http://localhost:2001/wcustomer/addRequest", requestData)
-      .then((response) => {
+      .then(() => {
         alert("Customer Request added successfully");
         setCustomerName("");
         setCustomerEmail("");
@@ -86,12 +83,19 @@ function WcReqForm() {
       });
   };
 
+  const handleViewClick = () => {
+    navigate("/wcusview"); // Navigate to WcusView component
+  };
+
   return (
-    <div className="piyumal_fullPage">
-    <div className="piyumal_wholesaleForm">
-      <form onSubmit={handleSubmit} className="piyumal__form_wholesaleForm">
-        <h2 className="piyumal__heading_customerForm">Customer Request Form</h2>
-        <div className="form-group_customerForm">
+    <div>
+      <button type="button" className="piyumal__button_ViewCustomer" onClick={handleViewClick}>
+        View Request
+      </button>
+      <div className="piyumal_wholesaleForm">
+        <form onSubmit={handleSubmit} className="piyumal__form_wholesaleForm">
+          <h2 className="piyumal__heading_customerForm">Customer Request Form</h2>
+          <div className="form-group_customerForm">
           <label className="piyumal__label_customerForm">
             Name:
             <input
@@ -192,11 +196,11 @@ function WcReqForm() {
             )}
           </label>
         </div>
-        <button type="submit" className="piyumal__button_AddCustomer">
-          Add Customer Request
-        </button>
-      </form>
-    </div>
+          <button type="submit" className="piyumal__button_AddCustomer">
+            Add Customer Request
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

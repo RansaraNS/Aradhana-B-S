@@ -101,26 +101,28 @@ function WcAllDetails() {
     const headerTextWidth = doc.getTextWidth(headerText);
     const xHeaderCenter =
       (doc.internal.pageSize.getWidth() - headerTextWidth) / 2;
-
-    doc.setTextColor(0, 0, 0);
     doc.text(headerText, xHeaderCenter, 15);
 
     const subHeaderText = "Experience the Difference in Every Aisle";
     const subHeaderFontSize = 10;
-    doc.setFont("Jura", "bold");
     doc.setFontSize(subHeaderFontSize);
     const subHeaderTextWidth = doc.getTextWidth(subHeaderText);
     const xSubHeaderCenter =
       (doc.internal.pageSize.getWidth() - subHeaderTextWidth) / 2;
-
-    doc.setTextColor(0, 0, 0);
     doc.text(subHeaderText, xSubHeaderCenter, 20);
 
-    const lineY = 25;
-    doc.line(10, lineY, doc.internal.pageSize.getWidth() - 10, lineY);
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+    doc.setFontSize(10);
+    doc.text(`Date: ${formattedDate}`, 10, 35); // Add date to the document
 
+    doc.line(10, 25, doc.internal.pageSize.getWidth() - 10, 25);
     doc.setFontSize(14);
-    doc.text("Wholesale Customers Requests Report", 14, 35);
+    doc.text("Wholesale Customer Requests Report", 14, 40);
 
     const columnWidths = [30, 60, 30, 30, 30, 40, 30];
 
@@ -147,7 +149,7 @@ function WcAllDetails() {
         ],
       ],
       body: bodyData,
-      startY: 40,
+      startY: 45,
       theme: "striped",
       styles: {
         cellPadding: 2,
@@ -166,13 +168,14 @@ function WcAllDetails() {
         },
         6: { cellWidth: columnWidths[6], halign: "left" },
       },
+
       didDrawPage: function (data) {
         doc.setFontSize(10);
         doc.text("Page " + data.pageCount, 180, 285);
       },
     });
 
-    doc.save("customer_requests_report.pdf");
+    doc.save(`customer_requests_report_${formattedDate}.pdf`);
   };
 
   // Update the filteredRequests logic to include actionFilter

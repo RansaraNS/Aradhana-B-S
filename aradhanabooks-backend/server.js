@@ -19,6 +19,7 @@ const uri = 'mongodb+srv://ransara00:projectitp@aradhanabooks.fdyw5ed.mongodb.ne
 const connect = async () => {
     try {
         await mongoose.connect(uri);
+        
     } catch (error) {
         console.log('MongoDB Error : ', error);
     }

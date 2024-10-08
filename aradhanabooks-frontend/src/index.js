@@ -17,6 +17,7 @@ import UpdateForm from "./Pages/Piyumal/UpdateForm.js"
 import SingleDetail from "./Pages/Piyumal/SingleDetail.js";
 import PreviewItem from "./Pages/Piyumal/PreviewItem.js";
 import ViewCart from "./Pages/Piyumal/ViewCart.js";
+import CusView from './Pages/Piyumal/CusView.js';
 
 import ComplaintForm from "./Pages/Iresha/ComplaintForm";
 import ComplaintsDisplay from "./Pages/Iresha/ComplaintsDisplay";
@@ -105,9 +106,10 @@ root.render(
       <Route path='/wcall' element={<ReqTable />} />
       <Route path='/wcform' element={<ReqForm />} />
       <Route path='wc/update/:id' element={<UpdateForm />} />
-      <Route path="/wc/:id" element={<SingleDetail />} />
+      <Route path="/wcusview/:id" element={<SingleDetail />} />
       <Route path="/item/:itemCode" element={<PreviewItem />} />
       <Route path="/cart" element={<ViewCart />} />
+      <Route path="/wcusview" element={<CusView />} />
 
       <Route path="/complaint/add" element={<ComplaintForm/>} />
       <Route path="/complaint/display" element={<ComplaintsDisplay />} />

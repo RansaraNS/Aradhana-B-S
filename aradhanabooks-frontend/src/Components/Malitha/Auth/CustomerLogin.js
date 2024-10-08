@@ -2,18 +2,20 @@ import React, { useState } from 'react';
 import { Box, Button, Container, TextField, Typography, IconButton, InputAdornment, Snackbar, Alert } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import axios from 'axios'; // Import axios or use fetch for API requests
+import authService from '../../../services/auth';
 import mainlogo from '../../../Images/Aradhana Books & Stationary Logo.png'
 
 const CustomerLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  // Snackbar state for success notification
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [openErrorSnackbar, setOpenErrorSnackbar] = useState(false);
 
-  const navigate = useNavigate(); // Initialize navigate using useNavigate
+  const navigate = useNavigate();
 
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
@@ -22,31 +24,34 @@ const CustomerLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
+    if (!email || !password) {
+      setErrorMessage('Email and Password are required.');
+      setOpenErrorSnackbar(true);
+      return;
+    }
+
     try {
-      // Handle login logic - send login request to backend
-      const response = await axios.post('http://localhost:2001/api/auth/login', { email, password });
+      setIsLoading(true);
+      const user = await authService.login(email, password); // Use authService.login to call the API
 
-      if (response.status === 200) {
-        // Login successful
-        console.log('Login successful');
-        
-        // Open success notification
-        setOpenSnackbar(true);
+      console.log('Login successful', user);
 
-        // Redirect to another page after a short delay (e.g., to a dashboard)
-        setTimeout(() => {
-          navigate('/home'); // Redirect to dashboard or any other page
-        }, 2000);
-      }
+      setOpenSnackbar(true);
+
+      setTimeout(() => {
+        navigate('/home');
+      }, 2000);
     } catch (error) {
-      console.error('Login failed', error);
-      // Handle login failure (e.g., show an error message)
+      setErrorMessage(error);
+      setOpenErrorSnackbar(true);
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  // Close Snackbar notification
   const handleSnackbarClose = () => {
     setOpenSnackbar(false);
+    setOpenErrorSnackbar(false);
   };
 
   return (

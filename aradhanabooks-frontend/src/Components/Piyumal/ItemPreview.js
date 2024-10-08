@@ -86,7 +86,7 @@ const ItemPreview = () => {
 
   const handleContinueShopping = () => {
     setShowConfirmBox(false);
-    navigate("/");
+    navigate("/item");
   };
 
   const handleViewCart = () => {

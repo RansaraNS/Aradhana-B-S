@@ -10,7 +10,7 @@ function InquiryList() {
   useEffect(() => {
     const fetchInquiries = async () => {
       try {
-        const response = await axios.get("/api/inquiries");
+        const response = await axios.get("http://localhost:2001/api/inquiries");
         setInquiries(response.data);
       } catch (error) {
         console.error("Error fetching inquiries:", error);
@@ -22,7 +22,7 @@ function InquiryList() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/inquiries/${id}`);
+      await axios.delete(`http://localhost:2001/api/inquiries/${id}`);
       setInquiries(inquiries.filter(inquiry => inquiry._id !== id));
     } catch (error) {
       console.error("Error deleting inquiry:", error);

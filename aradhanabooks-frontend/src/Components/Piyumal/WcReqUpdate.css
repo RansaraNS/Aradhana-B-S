@@ -1,76 +1,75 @@
 .piyumal_updatePage{
-    background-color: #2e7b39bb; 
-  min-height: 100vh;
-  padding: 20px;
- 
+  background-color: #2e7b39bb; 
+min-height: 100vh;
+padding: 20px;
+
 }
 
 .piyumal_UpdateForm {
-    border: 2px solid green;
-    border-radius: 10px;
-    padding: 20px;
-    width: 500px;
-    margin: 0 auto;
-    background: #028a0f;
-    background-color: rgba(255, 255, 255, 0.648);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .piyumal__card {
-    text-align: center;
-  }
-  
-  .piyumal__heading {
-    background-color: green;
-    color: white;
-    padding: 10px 0;
-    border-radius: 5px;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .piyumal__form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    align-items: flex-start; 
-  }
-  
-  .piyumal__form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    text-align: left;
-    width: 100%;
-  }
-  
-  .piyumal__input2,
-  .piyumal__textarea2 {
-    width: 90%; 
-    padding: 10px;
-    border: 2px solid green;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .piyumal__input2::placeholder,
-  .piyumal__textarea2::placeholder {
-    color: #c2c2c2;
-  }
-  
-  .piyumal__button {
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .piyumal__button:hover {
-    background-color: #028a0f;
-  }
-  
+  border: 2px solid green;
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px;
+  margin: 0 auto;
+  background: #028a0f;
+  background-color: rgba(255, 255, 255, 0.648);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.piyumal__card {
+  text-align: center;
+}
+
+.piyumal__heading {
+  background-color: green;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.piyumal__form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  align-items: flex-start; 
+}
+
+.piyumal__form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+
+.piyumal__input2,
+.piyumal__textarea2 {
+  width: 90%; 
+  padding: 10px;
+  border: 2px solid green;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.piyumal__input2::placeholder,
+.piyumal__textarea2::placeholder {
+  color: #c2c2c2;
+}
+
+.piyumal__button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.piyumal__button:hover {
+  background-color: #028a0f;
+}

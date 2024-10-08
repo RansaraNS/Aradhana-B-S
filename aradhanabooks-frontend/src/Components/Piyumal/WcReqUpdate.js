@@ -46,7 +46,7 @@ const WcReqUpdate = () => {
     axios
       .put(`http://localhost:2001/wcustomer/update/${id}`, updatedCustomer)
       .then(() => {
-        navigate(`/wc/${id}`);
+        navigate(`/wcusview/${id}`);
       })
       .catch((error) => {
         console.error("There was an error updating the customer data!", error);

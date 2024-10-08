@@ -1,16 +1,42 @@
+const express = require('express');
 const router = require('express').Router();
 const Review = require('../../models/Iresha/reviews.js');
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = 'your_jwt_secret';
+
+// Middleware to check for JWT
+const authenticateToken = (req, res, next) => {
+    const authHeader = req.header('Authorization');
+
+    if (!authHeader) {
+        return res.status(401).json({ error: 'Access denied' });
+    }
+
+    const token = authHeader.replace('Bearer ', '');
+
+    if (!token) {
+        return res.status(401).json({ error: 'Access denied' });
+    }
+
+    try {
+        const decoded = jwt.verify(token, JWT_SECRET);
+        req.customer = decoded;
+        next();
+    } catch (err) {
+        res.status(401).json({ error: 'Invalid token' });
+    }
+};
 
 // Add a new review
-router.post('/add', (req, res) => {
-    const { username, rating, comment } = req.body;
+router.post('/add', authenticateToken, async(req, res) => {
+    const { rating, comment } = req.body;
  
-    if (!username || !rating || !comment) {
+    if (!rating || !comment) {
         return res.status(400).json({ message: 'All fields are required.' });
     }
 
     const newReview = new Review({
-        username,
+        username: req.customer.id,
         rating,
         comment
          

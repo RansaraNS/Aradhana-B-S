@@ -124,3 +124,28 @@
     width: 90%; 
   }
 }
+
+.piyumal__button_ViewCustomer {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #218838;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  margin-bottom: 20px;
+}
+
+.piyumal__button_ViewCustomer:hover {
+  background-color: #023802; 
+  transform: scale(1.05); 
+}
+
+.piyumal__button_ViewCustomer:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); 
+}
