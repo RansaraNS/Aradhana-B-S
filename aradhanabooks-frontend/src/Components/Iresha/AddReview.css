@@ -1,0 +1,154 @@
+.iresha-review-containerF {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+  background-color: #f8f8f8;
+  height: 85vh;
+  flex-wrap: wrap;
+}
+
+.iresha-review-sectionF {
+  flex: 1 1 45%; 
+  margin-right: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 50%; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+.iresha-review-image-sectionF {
+  flex: 1 1 45%;
+  background-image: url('../../Images/reviewBack.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 75%; 
+  border-radius: 10px;
+  max-width: 100%; 
+}
+
+.iresha-button-containerF {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px; 
+}
+
+.iresha-text-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+  margin: 20px 0; 
+}
+
+.iresha-review-headingF {
+  font-size: 26px; 
+  margin-bottom: 10px; 
+  text-align: center; 
+}
+
+.iresha-review-para-messageF {
+  font-size: 20px; 
+  margin-bottom: 5px; 
+  text-align: center; 
+  color: #555; 
+}
+
+.iresha-review-login-messageF {
+  font-size: 16px; 
+  margin-bottom: 5px; 
+  text-align: center; 
+  color: #b02e2e; 
+}
+
+.iresha-rating-containerF {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.iresha-rating-labelF {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.iresha-starF {
+  cursor: pointer;
+  font-size: 24px;
+  color: #d3d3d3; 
+}
+
+.iresha-star-selected {
+  color: #ffcc00; 
+}
+
+.iresha-review-textareaF {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px; 
+  font-weight: normal; 
+  color: #333; 
+  line-height: 1.5; 
+}
+
+.iresha-error-messageF {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.iresha-btn-view-allF,
+.iresha-btn-specialF {
+  padding: 12px 25px;
+  background-color: #0f810f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+.iresha-btn-view-allF:hover,
+.iresha-btn-specialF:hover {
+  background-color: #0e450e;
+}
+
+@media (max-width: 1024px) {
+  .iresha-review-containerF {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .iresha-review-sectionF, .iresha-review-image-sectionF {
+    flex: 1 1 100%; 
+    margin-right: 0; 
+    margin-bottom: 20px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .iresha-review-sectionF {
+    padding: 20px; 
+  }
+
+  .iresha-btn-view-allF,
+  .iresha-btn-specialF {
+    padding: 10px 20px; 
+  }
+
+  .iresha-review-textareaF {
+    font-size: 14px; 
+  }
+}

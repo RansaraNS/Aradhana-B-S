@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import aradhanabooklogo from '../../Images/aradhanabookslogo.png';
-import './AddItemForm.css';
+import aradhanabooklogo from '../../Images/Aradhana Books & Stationary Logo.png';
+import '../../Components/Sasin/AddItemForm.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -119,6 +119,7 @@ const AddItemForm = () => {
             .then(() => {
                 alert("Item Added Successfully.");
                 clearForm();
+                navigate('/itemtable');
             })
             .catch((err) => {
                 alert(err);
@@ -126,49 +127,56 @@ const AddItemForm = () => {
     };
 
     return (
-        <div className='SR-additempage'>
-            <div className="SR-additemcontent">
-                <div className="SR-additemformtitle">
-                    <img className="SR-additemtitleimg" src={aradhanabooklogo} alt="Aradhana Grocery Logo" />
-                    <h1 className='SR-additemformname'>Add Products</h1>
-                    <button type="batton" className="SR-itemview" onClick={() => navigate('/viewAllItem')}>View Items</button>
-                </div>
+        <div>
+            <h1 className='SR-additemformname'>ITEMS ADD FORM</h1>
+            <div className='SR-additempage'>
+                <div className="SR-additemcontent">
+                    <div className="SR-additemformtitle">
+                        <img className="SR-additemtitleimg" src={aradhanabooklogo} alt="Aradhana Grocery Logo" />
+                        <button type="button" className="SR-itemview" onClick={() => navigate('/itemtable')}>View Item Table</button>
+                        <button type="button" className="SR-itemview1" onClick={() => navigate('/item')}>View Item Page</button>
+                    </div>
 
-                <div className="SR-additemform" onSubmit={sendData}>
-                    <form>
-                        <label className="SR-itemlabel">Item Code :</label>
-                        <input type="text" className="SR-itembar" id="itemCode" value={itemCode} onChange={ (e) => {setItemCode(e.target.value); }} />
+                    <div className="SR-additemform" onSubmit={sendData}>
+                        <form>
+                            <label className="SR-itemlabel">Item Code :</label>
+                            <input type="text" className="SR-itembar" id="itemCode" value={itemCode} onChange={ (e) => {setItemCode(e.target.value); }} />
 
-                        <label className="SR-itemlabel">Item Name :</label>
-                        <input type="text" className="SR-itembar" id="itemName" value={itemName} onChange={ (e) => {setItemName(e.target.value); }} />
+                            <label className="SR-itemlabel">Item Name :</label>
+                            <input type="text" className="SR-itembar" id="itemName" value={itemName} onChange={ (e) => {setItemName(e.target.value); }} />
 
-                        <label className="SR-itemlabel">Item Category :</label>
-                        <select className="SR-itembar" id="itemCategory" value={itemCategory} onChange={ (e) => {setItemCategory(e.target.value); }}>
-                            <option>Select Category</option>
-                            <option>A5 Exercise Books</option>
-                            <option>A4 CR Books</option>
-                            <option>B5 Books</option>
-                            <option>A5 Practical Books</option>
-                            <option>Notebooks</option>
-                            <option>A4 Drawing Books</option>
-                            <option>A4 Science Books</option>
-                            <option>A4 CR Practical Books</option>
-                        </select>
+                            <label className="SR-itemlabel">Item Category :</label>
+                            <select className="SR-itembar" id="itemCategory" value={itemCategory} onChange={ (e) => {setItemCategory(e.target.value); }}>
+                                <option>Select Category</option>
+                                <option>A5 Exercise Books</option>
+                                <option>A4 CR Books</option>
+                                <option>B5 Books</option>
+                                <option>A5 Practical Books</option>
+                                <option>Notebooks</option>
+                                <option>A4 Drawing Books</option>
+                                <option>A4 Science Books</option>
+                                <option>A4 CR Practical Books</option>
+                            </select>
 
-                        <label className="SR-itemlabel">Item Quantity :</label>
-                        <input type="text" className="SR-itembar" id="itemQuantity" value={itemQuantity} onChange={ (e) => {setItemQuantity(e.target.value); }} />
+                            <label className="SR-itemlabel">Item Quantity :</label>
+                            <input 
+                                type="text"
+                                className="SR-itembar"
+                                id="itemQuantity"
+                                value={itemQuantity} onChange={ (e) => { if (!isNaN(e.target.value) && Number(e.target.value) > 0) {setItemQuantity(e.target.value);} }} />
 
-                        <label className="SR-itemlabel">Item Price :</label>
-                        <input type="text" className="SR-itembar" id="itemPrice" value={itemPrice} onChange={ (e) => {setItemPrice(e.target.value); }} />
+                            <label className="SR-itemlabel">Item Price :</label>
+                            <input type="text" className="SR-itembar" id="itemPrice" value={itemPrice} onChange={ (e) => { if (!isNaN(e.target.value) && Number(e.target.value) > 0) {setItemPrice(e.target.value);} }} />
 
-                        <label className="SR-itemlabel">Item Received Date :</label>
-                        <input type="text" className="SR-itembar" id="itemReceivedDate" value={itemReceivedDate} onChange={ (e) => {setItemReceivedDate(e.target.value); }} />
+                            <label className="SR-itemlabel">Item Received Date :</label>
+                            <input type="text" className="SR-itembar" id="itemReceivedDate" value={itemReceivedDate} onChange={ (e) => {setItemReceivedDate(e.target.value); }} />
 
-                        <label className="SR-itemlabel">Item Picture :</label>
-                        <input type="text" className="SR-itembar" id="itemPicture" value={itemPicture} onChange={ (e) => {setItemPicture(e.target.value); }} />
+                            <label className="SR-itemlabel">Item Picture :</label>
+                            <input type="text" className="SR-itembar" id="itemPicture" value={itemPicture} onChange={ (e) => {setItemPicture(e.target.value); }} />
 
-                        <button type="submit" className="SR-itemsubmit">ADD PRODUCT</button>
-                    </form>
+                            <button type="submit" className="SR-itemsubmit">ADD ITEM</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

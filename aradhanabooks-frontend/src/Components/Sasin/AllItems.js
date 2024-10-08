@@ -38,8 +38,8 @@ function Allitems () {
     };
 
     return(
-        <div>
-            <div className="itemCardArea">
+        <div className="SR-itemCSet">
+            <div className="SR-itemCardArea">
                 {itemList.map((item) => (
                     <div key={item.itemCode} className="SR-itemCard">
                         <h2 className="SR-itemCardName">{item.itemName}</h2>
@@ -47,7 +47,7 @@ function Allitems () {
                         <img src={item.itemPicture} alt="Item pic" className="SR-itemCardImg" />
                         <h2 className="SR-itemCardPrice">Rs.{item.itemPrice}.00</h2>
                         <h2 className="SR-itemCardQuantity">{getStockStatus(item.itemQuantity)}</h2>
-                        <button className="SR-itemCardBtn" type="button" onClick={() => navigate()}>PREVIEW</button>
+                        <button className="SR-itemCardBtn" type="button" onClick={() => navigate(`/item/${item._id}`)}>PREVIEW</button>
                     </div>
                 ))}
             </div>

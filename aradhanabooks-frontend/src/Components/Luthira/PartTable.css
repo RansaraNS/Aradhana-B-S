@@ -1,0 +1,111 @@
+
+.MuiTableContainer-root {
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+.MuiTable-root {
+    border-collapse: collapse;
+   
+    width: 100%;
+}
+
+
+.MuiTableHead-root {
+    background-color: #000000;
+   
+}
+
+.MuiTableCell-head {
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    border: 1px solid #ddd;
+    
+}
+
+
+.MuiTableCell-head:nth-child(1),
+.MuiTableCell-head:nth-child(2),
+.MuiTableCell-head:nth-child(3),
+.MuiTableCell-head:nth-child(4),
+.MuiTableCell-head:nth-child(5),
+.MuiTableCell-head:nth-child(6),
+.MuiTableCell-head:nth-child(7),
+.MuiTableCell-head:nth-child(8),
+.MuiTableCell-head:nth-child(9) {
+    color: #5d18c6;
+    
+}
+
+
+.MuiTableBody-root {
+    font-size: 14px;
+}
+
+.MuiTableCell-body {
+    text-align: center;
+    padding: 10px;
+    color: #0a0000;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    
+}
+
+
+.MuiTableRow-root:nth-of-type(odd) {
+    background-color: #f5f5f5;
+}
+
+.MuiTableRow-root:nth-of-type(even) {
+    background-color: #e0e0ff;
+}
+
+
+.MuiTableRow-root {
+    border-bottom: 1px solid #ddd;
+}
+
+
+.MuiTableCell-body[colspan="12"] {
+    font-style: italic;
+    color: #999;
+}
+
+.MuiButton-root {
+    background-color: #5d18c6;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.MuiButton-root:hover {
+    background-color: #4a13a0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .MuiTableContainer-root {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .MuiTableCell-head,
+    .MuiTableCell-body {
+        font-size: 12px;
+    }
+
+    .MuiButton-root {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

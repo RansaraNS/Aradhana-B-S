@@ -1,0 +1,133 @@
+.piyumal_singleDetail {
+  padding: 20px;
+  display: flex;
+  background: url("../../Images/aradhanabookslogo.png");
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+  position: relative;
+  background-color: #e4ebe4;
+  
+}
+
+.piyumal__container_singleDetail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); 
+  z-index: -1; 
+}
+
+.piyumal__card_singleDetail {
+  background-color: rgb(224, 231, 225);
+  padding: 20px;
+  border-radius: 18px;
+  border: 4px solid #0e450e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; 
+}
+
+
+.piyumal__heading_singleDetail {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center; 
+}
+
+.piyumal__field_singleDetail {
+  margin-bottom: 10px;
+}
+
+.piyumal__label_name,
+.piyumal__label_email,
+.piyumal__label_con,
+.piyumal__label_company_name,
+.piyumal__label_address,
+.piyumal__label_descrip {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.piyumal__value_name,
+.piyumal__value_email,
+.piyumal__value_con,
+.piyumal__value_company_name,
+.piyumal__value_address,
+.piyumal__value_descrip {
+  color: #555;
+}
+
+.piyumal__actions {
+  margin-top: 20px; 
+  display: flex; 
+  justify-content: center; 
+  gap: 10px; 
+}
+
+.piyumal__button_update1, 
+.piyumal__button_delete1 {
+  background-color: #0e450e; 
+  border: none; 
+  color: white; 
+  padding: 12px 20px; 
+  font-size: 18px; 
+  margin: 5px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.piyumal__button_update1:hover, 
+.piyumal__button_delete1:hover {
+  transform: scale(1.05); 
+}
+
+.piyumal__button_delete1 {
+  background-color: #c20c0c; 
+}
+
+.piyumal__button_delete1:hover {
+  background-color: #660b0b; 
+}
+
+.piyumal__details_list {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.piyumal__field_singleDetail {
+  margin-bottom: 15px; 
+  display: flex; 
+  align-items: center; 
+}
+
+.piyumal__label_name,
+.piyumal__label_email,
+.piyumal__label_con,
+.piyumal__label_company_name,
+.piyumal__label_address,
+.piyumal__label_descrip {
+  font-weight: bold;
+  margin-right: 10px; 
+  flex-basis: 150px;
+}
+
+.piyumal__value_name,
+.piyumal__value_email,
+.piyumal__value_con,
+.piyumal__value_company_name,
+.piyumal__value_address,
+.piyumal__value_descrip {
+  color: #555; 
+  flex-grow: 1;
+}

@@ -1,0 +1,188 @@
+.iresha-reviews-containerAVR {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  font-family: Arial, sans-serif;
+}
+
+.iresha-reviews-headingAVR {
+  font-size: 28px;
+  color: #199919;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.iresha-reviews-controlsAVR {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.iresha-dropdown-buttonAVR,
+.iresha-dropdown-sortAVR {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.iresha-export-buttonAVR {
+  background-color: #c21c63;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.iresha-export-buttonAVR:hover {
+  background-color: #f04681;
+}
+
+.iresha-overall-ratingAVR {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.iresha-stars {
+  display: inline-block;
+  color: #ffcc00;
+  font-size: 20px;
+}
+
+.iresha-overall-rating-numberAVR {
+  font-size: 18px;
+  color: #79133e;
+  margin-left: 10px;
+}
+
+.iresha-summary-reportAVR {
+  background-color: #e8fbe8;
+  padding: 10px;
+  border: 1px solid #0e450e;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.iresha-summary-listAVR {
+  list-style: none;
+  padding: 0;
+}
+
+.iresha-summary-itemAVR-5,
+.iresha-summary-itemAVR-4,
+.iresha-summary-itemAVR-3,
+.iresha-summary-itemAVR-2,
+.iresha-summary-itemAVR-1 {
+  padding: 5px 0;
+  font-size: 16px;
+  color: #199919;
+}
+
+.iresha-view-mode-buttonsAVR {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.iresha-buttonAVR {
+  background-color: #199919;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.iresha-buttonAVR:hover {
+  background-color: #0e450e;
+}
+
+.iresha-buttonAVR:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+.iresha-featured-review-listAVR,
+.iresha-review-listAVR {
+  margin-bottom: 30px;
+}
+
+.iresha-review-cardAVR {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.iresha-review-usernameAVR {
+  font-size: 20px;
+  color: #199919;
+  margin-bottom: 8px;
+}
+
+.iresha-review-commentAVR {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.iresha-review-dateAVR {
+  font-size: 14px;
+  color: #999;
+}
+
+.iresha-featured-buttonAVR {
+  background-color: #0f810f;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.iresha-featured-buttonAVR:hover {
+  background-color: #199919;
+}
+
+.iresha-paginationAVR {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.iresha-paginationAVR button {
+  background-color: #0f810f;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.iresha-paginationAVR button:hover {
+  background-color: #199919;
+}
+
+.iresha-paginationAVR button.active {
+  background-color: #c21c63;
+}
+
+.iresha-paginationAVR button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

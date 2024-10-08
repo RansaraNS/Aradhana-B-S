@@ -3,6 +3,7 @@ import usericon from '../../Images/userAccount.png'
 import shopcart from '../../Images/shoppingCart.png'
 import hotline from '../../Images/hotLine.png'
 import './HomeHead.css';
+import { Link } from "react-router-dom";
 
 const HomeHead = () => {
     return(
@@ -17,8 +18,8 @@ const HomeHead = () => {
 
                 <div className="SR-headtitleSet2">
                     <div className="SR-topsection">
-                        <img className="SR-icon" src={usericon} alt="User Account Icon" />
-                        <img className="SR-icon" src={shopcart} alt="Shopping Cart Icon" />
+                        <Link to="/login"><img className="SR-icon" src={usericon} alt="User Account Icon" /></Link>
+                        <Link to="/cart"><img className="SR-icon" src={shopcart} alt="Shopping Cart Icon" /></Link>
                     </div>
                     <div className="SR-bottomsection">
                         <img className="SR-phoneicon " src={hotline} alt="HotLine Icon" />
@@ -29,13 +30,14 @@ const HomeHead = () => {
             
             <nav className='SR-headNav'>
                 <ul className='SR-headul'>
-                    <li className='SR-headli'> <a className='SR-headlink' href='example.com'> Home </a> </li>
-                    <li className='SR-headli'> <a className='SR-headlink' href='example.com'> Items </a> </li>
-                    <li className='SR-headli'> <a className='SR-headlink' href='example.com'> Ratings </a> </li>
-                    <li className='SR-headli'> <a className='SR-headlink' href='example.com'> Whole Sale </a> </li>
-                    <li className='SR-headli'> <a className='SR-headlink' href='example.com'> Complain </a> </li>
-                    <li className='SR-headli'> <a className='SR-headlink' href='example.com'> Tracking Portal </a> </li>
-                    <li className='SR-headli'> <a className='SR-headlink' href='example.com'> About Us </a> </li>
+                    <li className='SR-headli'> <a className='SR-headlink' href='/home'> Home </a> </li>
+                    <li className='SR-headli'> <a className='SR-headlink' href='/item'> Items </a> </li>
+                    <li className='SR-headli'> <a className='SR-headlink' href='/review/add'> Ratings </a> </li>
+                    <li className='SR-headli'> <a className='SR-headlink' href='/wcform'> Whole Sale </a> </li>
+                    <li className='SR-headli'> <a className='SR-headlink' href='/complaint/add'> Complain </a> </li>
+                    <li className='SR-headli'> <a className='SR-headlink' href='/tracking'> Tracking Portal </a> </li>
+                    <li className='SR-headli'> <a className='SR-headlink' href='/discount-page'> Loyalty Discount </a> </li>
+                    <li className='SR-headli'> <a className='SR-headlink' href='/aboutus'> About Us </a> </li>
                 </ul>
             </nav>
 

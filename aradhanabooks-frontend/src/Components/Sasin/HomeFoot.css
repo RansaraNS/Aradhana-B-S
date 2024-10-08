@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.SR-homeFooter {
+    background-color: #D9D9D9;
+    margin: 0px;
+}
+
+.SR-homeFootUpLine {
+    background-color: #E90074;
+    height: 20px;
+    width: 100%;
+}
+
+.SR-homeFootbody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.SR-homeFootbodyArea1 {
+    text-align: center;
+    flex: 1;
+    
+}
+
+.SR-homeFootbodyImg {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.SR-homeFootbodyt1 {
+    color: #000000;
+    margin: 5px 0;
+}
+
+.SR-homeFootbodyArea2,
+.SR-homeFootbodyArea3,
+.SR-homeFootbodyArea4 {
+    flex: 1;
+    text-align: center;
+}
+
+.SR-homeFootbodyt2title,
+.SR-homeFootbodyt3title,
+.SR-homeFootbodyt4title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.SR-homeFootbodyt2,
+.SR-homeFootbodyt3,
+.SR-homeFootbodyt4 {
+    margin: 5px 0;
+}
+
+.SR-homeFootbodyt2link,
+.SR-homeFootbodyt3link,
+.SR-homeFootbodyt4link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.SR-homeFootbodyt2link:hover,
+.SR-homeFootbodyt3link:hover,
+.SR-homeFootbodyt4link:hover {
+    text-decoration: underline;
+    color:#E90074;
+}
+
+.SR-homeFootdownLine {
+    background-color: #454745;
+    height: auto;
+}
+
+.SR-homeFootdownLinetitle {
+    font-family: "Kanit", sans-serif;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin: 0;
+    margin-left: 30%;
+    font-weight: 400;
+    padding: 10px 0px;
+}

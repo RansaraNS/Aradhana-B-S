@@ -1,5 +1,6 @@
 import ShopIcon from '../../Images/shopicon.png'
 import '../../Components/Sasin/HomeReqBar.css'
+import { Link } from "react-router-dom";
 
 const HomeReqBar = () => {
     return(
@@ -12,7 +13,7 @@ const HomeReqBar = () => {
                 <div className='SR-reqBarTitle'>
                     <h2 className='SR-reqBarHeading'> Become a Authorized Distributor </h2>
                     <div className='SR-reqBarApplyBar'>
-                        <h3 className='SR-reqBarApply'> APPLY NOW </h3>
+                    <Link to="/wcform"><button className='SR-reqBarApply'> APPLY NOW </button></Link>
                     </div>
                 </div>
             </div>

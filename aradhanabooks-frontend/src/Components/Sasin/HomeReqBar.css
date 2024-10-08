@@ -45,29 +45,37 @@
 .SR-reqBarHeading {
     margin-left: 30px;
     font-family: "IBM Plex Sans Devanagari", sans-serif;
-    font-size: 96px;
-    margin-top: -15px;
+    font-size: 72px;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    justify-content: center;
     color: #36552C;
 }
 
 .SR-reqBarApplyBar {
-    width: 600px;
-    height: 70px;
-    margin-left: 400px;
-    border-radius: 20px;
-    background-color: #EF0000;
     justify-content: center;
     align-items: center;
 }
 
 .SR-reqBarApply {
-    
+    width: 550px;
+    height: 70px;
     font-family: "Bakbak One", sans-serif;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 40px;
     padding: 4px 160px;
-    margin-top: -80px;
+    margin-top: 0px;
     color: #FFFFFF;
+    margin-left: 250px;
+    border-radius: 20px;
+    background-color: #EF0000;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.SR-reqBarApply:hover {
+    background-color: #FBCE3B;
+    color: #000000;
 }
 
 @media (max-width: 1024px) {

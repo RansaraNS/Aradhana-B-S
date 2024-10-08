@@ -1,0 +1,172 @@
+ 
+.iresha-containerRE {
+  width: 90%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+ 
+.iresha-headingRE {
+  font-size: 28px;
+  color: #1f7a1f;
+  text-align: center;
+  margin-bottom: 30px;
+}
+ 
+.iresha-report-summaryRE {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+.iresha-report-summaryRE p {
+  margin: 10px 0;
+}
+ 
+.iresha-pdf-selectionRE {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.iresha-select {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.iresha-btn-generateRE {
+  background-color: #198b19;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.iresha-btn-generateRE:hover {
+  background-color: #116611;
+}
+ 
+.iresha-searchRE {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.iresha-inputRE {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.iresha-selectRE {
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.iresha-date-filterRE {
+  padding: 10px;
+  width: 180px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+ 
+.iresha-report-tableRE {
+  margin-top: 20px;
+}
+
+.iresha-tableRE {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.iresha-tableRE th, 
+.iresha-tableRE td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.iresha-tableRE th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.iresha-tableRE td {
+  background-color: #fff;
+  color: #555;
+}
+
+.iresha-tableRE tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+ 
+.modalRE {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modalRE h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modalRE p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.iresha-btn-closeRE {
+  background-color: #b20000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.iresha-btn-closeRE:hover {
+  background-color: #990000;
+}

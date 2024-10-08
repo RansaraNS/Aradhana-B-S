@@ -39,25 +39,28 @@ router.route('/items').get((req, res) => {
             res.status(500).json({ success: false, error: "Error fetching items" });
         });
 });
-
-router.route('/updateitem/:id').put(async(req,res) => {
+// i changed this one to put method
+router.put('/updateitem/:id', async (req, res) => {
     let itemId = req.params.id;
-    const {itemCode, itemName, itemCategory, itemQuantity, itemPrice, itemReceivedDate, itemPicture} = res.body;
-    const updateitem = {
+    const { itemCode, itemName, itemCategory, itemQuantity, itemPrice, itemReceivedDate, itemPicture } = req.body;
+
+    const updateItem = {
         itemCode,
         itemName,
         itemCategory,
         itemQuantity,
         itemPrice,
         itemReceivedDate,
-        itemPicture
+        itemPicture,
+    };
+
+    try {
+        await Item.findByIdAndUpdate(itemId, updateItem);
+        res.status(200).json({ status: "Item updated successfully." });
+    } catch (error) {
+        console.error("Error updating item: ", error);
+        res.status(500).json({ status: "Item not updated. Try again." });
     }
-    const update = await Item.findByIdAndUpdate(itemId, updateitem).then(() => {
-            res.status(200).send({ status: "Item updated.." });
-    }).catch((err) => {
-        console.log(err);
-        res.status(500).json({ status: "Item not updated, Try Again.." });
-    })
 });
 
 router.route('/deleteitem/:id').delete(async(req,res) => {
@@ -71,7 +74,7 @@ router.route('/deleteitem/:id').delete(async(req,res) => {
     }
 });
 
-router.get('/item/:id', async(req,res) => {
+router.get('/:id', async(req,res) => {
     try {
         const item = await Item.findById(req.params.id);
         if(!item) {

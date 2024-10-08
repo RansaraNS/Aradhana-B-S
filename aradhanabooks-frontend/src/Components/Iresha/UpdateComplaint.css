@@ -1,0 +1,71 @@
+.iresha-containerUp {
+  width: 600px;
+  padding: 40px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  margin: 40px auto;
+}
+
+.iresha-form-groupUp {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.iresha-form-labelUp {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #004D40;
+  font-weight: bold;
+}
+
+.iresha-headerUp {
+  text-align: center;
+  font-size: 40px;
+  color: #c21c63;
+  margin-bottom: 20px;
+}
+
+.iresha-form-controlUp {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.iresha-btnUp {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.iresha-btn-primaryUp {
+  background-color: #f04681;
+  color: white;
+}
+
+.iresha-btn-primaryUp:hover {
+  background-color: #c21c63;
+}
+
+.iresha-btn-secondaryUp {
+  background-color: #f04681;
+}
+
+.iresha-btn-secondaryUp:hover {
+  background-color: #c21c63;
+}
+
+.iresha-imageUp {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+}
