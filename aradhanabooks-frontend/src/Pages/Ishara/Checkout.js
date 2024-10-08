@@ -7,6 +7,7 @@ const Checkout = () => {
   const { register, handleSubmit, setValue, resetField, watch, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const location = useLocation(); 
+  require('./tailwind.css')
 
   const [cartItems, setCartItems] = useState(location.state?.cart || []); 
   const [paymentMethod, setPaymentMethod] = useState('');
@@ -153,8 +154,10 @@ const Checkout = () => {
 
   const validatePhoneNumber = (e) => {
     const phoneNumber = e.target.value;
-    if (!/^\d+$/.test(phoneNumber)) {
-      setPhoneError('Phone number must be numeric');
+  
+    // Check if it starts with 0 and is exactly 10 digits long
+    if (!/^0\d{9}$/.test(phoneNumber)) {
+      setPhoneError('Phone number must start with 0 and be exactly 10 digits long');
     } else {
       setPhoneError('');
     }
@@ -244,26 +247,34 @@ const Checkout = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block font-medium">Phone *</label>
-                  <input
-                    type="text"
-                    className={`w-full border ${phoneError ? 'border-red-500' : errors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:ring focus:ring-blue-300`}
-                    {...register('phone', {
-                      required: 'Phone number is required',
-                      pattern: {
-                        value: /^[0-9]+$/,
-                        message: 'Phone number must be numeric',
-                      },
-                    })}
-                    onChange={validatePhoneNumber} 
-                  />
-                  {phoneError && (
-                    <p className="text-red-500 text-sm mt-1">{phoneError}</p>
-                  )}
-                  {errors.phone && !phoneError && (
-                    <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
-                  )}
-                </div>
+  <label className="block font-medium">Phone *</label>
+  <input
+    type="text"
+    className={`w-full border ${phoneError ? 'border-red-500' : errors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:ring focus:ring-blue-300`}
+    {...register('phone', {
+      required: 'Phone number is required',
+      pattern: {
+        value: /^[0-9]+$/,
+        message: 'Phone number must be numeric',
+      },
+    })}
+    onBlur={(e) => {
+      const phoneNumber = e.target.value;
+      if (phoneNumber.length !== 10) {
+        setPhoneError('Enter valid phone number');
+      } else {
+        setPhoneError('');
+      }
+    }}
+  />
+  {phoneError && (
+    <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+  )}
+  {errors.phone && !phoneError && (
+    <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+  )}
+</div>
+
                 <div>
                   <label className="block font-medium">Email Address *</label>
                   <input

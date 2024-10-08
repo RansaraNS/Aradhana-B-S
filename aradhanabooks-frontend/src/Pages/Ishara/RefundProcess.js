@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { FaInfoCircle, FaExclamationTriangle } from 'react-icons/fa';
+import CHeader from '../../Components/Sasin/HomeHead';
+import CFooter from '../../Components/Sasin/HomeFoot';
 
 const RefundProcess = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { order } = location.state;
+  require('./tailwind.css')
 
   const [deliveryStatus, setDeliveryStatus] = useState('');
   const [refundReason, setRefundReason] = useState('');
@@ -51,12 +54,13 @@ const RefundProcess = () => {
   };
 
   return (
+    <div><CHeader /> <div  className='py-8 '></div>
     <div className="p-8 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">Refund Process</h1>
 
       {/* Order Information */}
       <div className="bg-white shadow-md p-4 rounded-lg mb-6">
-        <h2 className="text-lg font-semibold">Order #{order._id}</h2>
+        <h2 className="text-lg font-semibold">Order #{order.customOrderId}</h2>
         <p className="text-sm text-gray-600">Total: LKR {order.total}</p>
         <ul className="list-disc list-inside">
           {order.items.map(({ item, quantity }) => (
@@ -141,7 +145,7 @@ const RefundProcess = () => {
           {isSubmitting ? 'Submitting...' : 'Submit Refund Request'}
         </button>
       </form>
-    </div>
+    </div><CFooter /></div>
   );
 };
 

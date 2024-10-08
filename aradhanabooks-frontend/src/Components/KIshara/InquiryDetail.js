@@ -28,7 +28,7 @@ function InquiryDetail() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/api/inquiries/${id}`);
+      await axios.delete(`http://localhost:2001/api/inquiries/${id}`);
       alert("Deleted Successfully");
       navigate("/CusTrack");
     } catch (error) {

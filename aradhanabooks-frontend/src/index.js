@@ -140,7 +140,7 @@ root.render(
       <Route path="/inquiry/:id" element={<CusInquiryDetail />} />
       <Route path="/inquiry/update/:id" element={<CusUpdateInquiryForm />} />
 
-      <Route path='/login' element={<CustomerLogin />} />
+      <Route path='/' element={<CustomerLogin />} />
       <Route path="/staff-login" element={<StaffLogin />} />
       <Route path="/admin-login" element={<AdminLogin />} />
       <Route path="/register" element={<Register />} />

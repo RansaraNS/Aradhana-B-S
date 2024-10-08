@@ -1,3 +1,3 @@
 const Statistics = () => {
-    return <div>Statistics Content</div>;
-  }; 
+  return <div>Statistics Content</div>;
+}; 

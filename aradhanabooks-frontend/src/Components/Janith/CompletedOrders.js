@@ -18,11 +18,19 @@ const CompletedOrders = () => {
     JSON.parse(localStorage.getItem("completedOrders")) || []
   );
   const navigate = useNavigate();
+
   // Fetch completed orders from localStorage on component mount
   useEffect(() => {
     const storedCompletedOrders = JSON.parse(localStorage.getItem("completedOrders")) || [];
     setCompletedOrders(storedCompletedOrders);
   }, []);
+
+  // Function to remove an order by ID
+  const handleRemoveOrder = (orderId) => {
+    const updatedOrders = completedOrders.filter((order) => order._id !== orderId);
+    setCompletedOrders(updatedOrders);
+    localStorage.setItem("completedOrders", JSON.stringify(updatedOrders));
+  };
 
   if (completedOrders.length === 0) {
     return <Typography>No Completed Orders available.</Typography>;
@@ -54,7 +62,7 @@ const CompletedOrders = () => {
               <TableCell sx={{ fontSize: "20px", fontWeight: "bold" }}>Payment Method</TableCell>
               <TableCell sx={{ fontSize: "20px", fontWeight: "bold" }}>Shipping Address</TableCell>
               <TableCell sx={{ fontSize: "20px", fontWeight: "bold" }}>Status</TableCell>
-              <TableCell sx={{ fontSize: "20px", fontWeight: "bold" }}>Action</TableCell>
+              <TableCell sx={{ fontSize: "20px", fontWeight: "bold" }}>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -81,19 +89,19 @@ const CompletedOrders = () => {
                 <TableCell>{order.status === "In Progress" ? "Completed" : order.status}</TableCell>
                 <TableCell>
                   <Button
-                    variant="outlined"
-                    color="secondary"
                     sx={{
-                      borderColor: "#c21c63",
-                      marginLeft: "12px",
-                      color: "#c21c63",
-                      "&:hover": {
-                        borderColor: "#b71b5b",
-                        color: "#b71b5b",
+                      backgroundColor: "#ff0000",
+                      color: "#fff",
+                      padding: "5px 10px",
+                      fontSize: "14px",
+                      '&:hover': {
+                        opacity: '0.8',
+                        backgroundColor: '#e60000',
                       },
                     }}
+                    onClick={() => handleRemoveOrder(order._id)}
                   >
-                    AssignTo
+                    Remove
                   </Button>
                 </TableCell>
               </TableRow>
@@ -104,18 +112,18 @@ const CompletedOrders = () => {
 
       <Button
         sx={{
-          marginTop: '20px',
-          backgroundColor: '#c21c63',
-          color: '#fff',
-          padding: '10px 20px',
-          fontSize: '16px',
-          borderRadius: '5px',
-          '&:hover': {
-            opacity: '0.8',
-            backgroundColor: '#b71b5b',
+          marginTop: "20px",
+          backgroundColor: "#c21c63",
+          color: "#fff",
+          padding: "10px 20px",
+          fontSize: "16px",
+          borderRadius: "5px",
+          "&:hover": {
+            opacity: "0.8",
+            backgroundColor: "#b71b5b",
           },
         }}
-        onClick={() => navigate('/porders')}
+        onClick={() => navigate("/porders")}
       >
         Back
       </Button>

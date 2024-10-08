@@ -16,6 +16,7 @@ const SalesOverview = () => {
     sales: [],
     months: []
   });
+  require('./tailwind.css')
 
   const [dateRange, setDateRange] = useState({ start: '', end: '' });
   const [currentPage, setCurrentPage] = useState(1);
@@ -112,7 +113,7 @@ const SalesOverview = () => {
           >
             <FaUserCircle size={64} className="mb-4" />
             <h2 className="text-lg font-semibold">Aradhana Admin</h2>
-            <p className="text-sm">admin@aradhana.com</p>
+            <p className="text-sm text-white	">admin@aradhana.com</p>
           </div>
 
           {/* Navigation Links */}
@@ -195,24 +196,24 @@ const SalesOverview = () => {
             <div className="bg-gradient-to-r from-blue-500 to-blue-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out text-white flex items-center">
               <FaDollarSign className="text-3xl mr-4" />
               <div>
-                <p className="text-lg font-semibold">Total Revenue</p>
-                <p className="text-3xl font-bold">LKR {totalRevenue.toLocaleString()}</p>
+                <p className="text-lg font-semibold text-white	">Total Revenue</p>
+                <p className="text-3xl font-bold text-white	">LKR {totalRevenue.toLocaleString()}</p>
               </div>
             </div>
             {/* Total Orders */}
             <div className="bg-gradient-to-r from-green-500 to-green-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out text-white flex items-center">
               <FaChartLine className="text-3xl mr-4" />
               <div>
-                <p className="text-lg font-semibold">Total Orders</p>
-                <p className="text-3xl font-bold">{totalOrders}</p>
+                <p className="text-lg font-semibold text-white	">Total Orders</p>
+                <p className="text-3xl font-bold text-white	">{totalOrders}</p>
               </div>
             </div>
             {/* Sales Average */}
             <div className="bg-gradient-to-r from-yellow-500 to-yellow-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out text-white flex items-center">
               <FaCalculator className="text-3xl mr-4" />
               <div>
-                <p className="text-lg font-semibold">Average Sales</p>
-                <p className="text-3xl font-bold">LKR {salesAverage}</p>
+                <p className="text-lg font-semibold text-white	">Average Sales</p>
+                <p className="text-3xl font-bold text-white	">LKR {salesAverage}</p>
               </div>
             </div>
           </div>

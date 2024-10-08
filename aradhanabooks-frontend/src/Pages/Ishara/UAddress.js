@@ -3,6 +3,8 @@ import PSidebar from '../../Components/Ishara/PSidebar.js';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { FaPlus, FaEdit, FaTrash } from 'react-icons/fa';
+import CHeader from '../../Components/Sasin/HomeHead';
+import CFooter from '../../Components/Sasin/HomeFoot';
 
 const UAddress = () => {
   const [addresses, setAddresses] = useState([]);
@@ -10,6 +12,7 @@ const UAddress = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [currentAddress, setCurrentAddress] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  require('./tailwind.css')
 
   const { register, handleSubmit, reset, setError, clearErrors, formState: { errors } } = useForm();
 
@@ -132,6 +135,7 @@ const UAddress = () => {
   };
 
   return (
+    <div><CHeader /> <div  className='py-5'></div>
     <div className="min-h-screen bg-gray-100 flex justify-center py-12">
       <div className="w-full max-w-7xl bg-white shadow-md rounded-lg p-8 flex">
         <PSidebar />
@@ -288,7 +292,7 @@ const UAddress = () => {
           </div>
         </div>
       )}
-    </div>
+    </div><CFooter /></div>
   );
 };
 

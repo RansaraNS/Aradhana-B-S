@@ -34,7 +34,7 @@ function TrackInquiryForm() {
 
     try {
       // Submit the inquiry to the server
-      const response = await axios.post("/api/inquiries", inquiryData);
+      const response = await axios.post("http://localhost:2001/api/inquiries", inquiryData);
       const inquiryId = response.data.inquiry._id; // Adjust according to your API response structure
 
       // Navigate to InquiryDetail page with the inquiry ID

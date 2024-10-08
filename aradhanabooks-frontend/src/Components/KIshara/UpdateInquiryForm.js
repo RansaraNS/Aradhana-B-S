@@ -18,7 +18,7 @@ function UpdateInquiryForm() {
   useEffect(() => {
     const fetchInquiry = async () => {
       try {
-        const response = await axios.get(`/api/inquiries/${id}`);
+        const response = await axios.get(`http://localhost:2001/api/inquiries/${id}`);
         setInquiry(response.data);
       } catch (error) {
         console.error("Error fetching inquiry:", error);
@@ -49,7 +49,7 @@ function UpdateInquiryForm() {
     }
 
     try {
-      await axios.put(`/api/inquiries/${id}`, inquiry);
+      await axios.put(`http://localhost:2001/api/inquiries/${id}`, inquiry);
       navigate(`/inquiry/${id}`); // Redirect to inquiry detail page after updating
     } catch (error) {
       console.error("Error updating inquiry:", error);

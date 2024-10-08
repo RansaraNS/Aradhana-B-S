@@ -1,9 +1,14 @@
 import React from 'react';
 import PSidebar from '../../Components/Ishara/PSidebar.js';
-
+import CHeader from '../../Components/Sasin/HomeHead';
+import CFooter from '../../Components/Sasin/HomeFoot';
 
 const UDashboard = () => {
+  require('./tailwind.css')
+
   return (
+    <div><CHeader /> <div  className='py-11 '>
+
     <div className="min-h-screen bg-gray-100 flex justify-center py-12">
       <div className="w-full max-w-6xl bg-white shadow-md rounded-lg p-8 flex">
         <PSidebar />
@@ -13,7 +18,7 @@ const UDashboard = () => {
           
         </div>
       </div>
-    </div>
+    </div></div><CFooter /></div>
   );
 };
 

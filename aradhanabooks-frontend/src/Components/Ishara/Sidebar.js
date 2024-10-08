@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaTachometerAlt, FaChartBar, FaUndoAlt, FaMoneyBillAlt, FaSignOutAlt, FaUserCircle } from 'react-icons/fa';
 
 const Sidebar = () => {
+  require('../../Pages/Ishara/tailwind.css')
   return (
     <div 
       style={{ backgroundColor: '#0e450e' }} 

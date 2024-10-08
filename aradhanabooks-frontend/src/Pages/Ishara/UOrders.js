@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import PSidebar from '../../Components/Ishara/PSidebar.js';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import CHeader from '../../Components/Sasin/HomeHead';
+import CFooter from '../../Components/Sasin/HomeFoot';
+
 
 const UOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -11,6 +14,7 @@ const UOrders = () => {
   const [filter, setFilter] = useState('');
   const [expandedOrders, setExpandedOrders] = useState({});
   const navigate = useNavigate();
+  require('./tailwind.css')
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -74,6 +78,8 @@ const UOrders = () => {
   const currentOrders = filteredOrders.slice(indexOfFirstOrder, indexOfLastOrder);
 
   return (
+    <div><CHeader /> <div  className='py-8 '>
+
     <div className="min-h-screen bg-gray-100 flex justify-center py-12">
       <div className="w-full max-w-7xl bg-white shadow-md rounded-lg p-8 flex">
         <PSidebar />
@@ -205,7 +211,7 @@ const UOrders = () => {
           )}
         </div>
       </div>
-    </div>
+    </div></div><CFooter /></div>
   );
 };
 

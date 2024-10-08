@@ -15,6 +15,7 @@ const RefundsManage = () => {
   const [refundsPerPage] = useState(5);
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
+  require('./tailwind.css')
 
   useEffect(() => {
     const fetchRefunds = async () => {
@@ -129,7 +130,7 @@ const RefundsManage = () => {
           <div style={{ backgroundColor: '#0e450e' }} className="p-6 flex items-center justify-center flex-col">
             <FaUserCircle size={64} className="mb-4" />
             <h2 className="text-lg font-semibold">Aradhana Admin</h2>
-            <p className="text-sm">admin@aradhana.com</p>
+            <p className="text-sm text-white	">admin@aradhana.com</p>
           </div>
 
           {/* Navigation Links */}
@@ -198,15 +199,15 @@ const RefundsManage = () => {
             <div className="bg-gradient-to-r from-green-400 to-green-600 p-6 rounded-lg shadow-md text-white flex items-center">
               <FaFileInvoiceDollar className="text-3xl mr-4" />
               <div>
-                <p className="text-lg font-semibold">Total Approved Refunds</p>
-                <p className="text-3xl font-bold">{totalApprovedRefunds}</p>
+                <p className="text-lg font-semibold text-white	">Total Approved Refunds</p>
+                <p className="text-3xl font-bold text-white	">{totalApprovedRefunds}</p>
               </div>
             </div>
             <div className="bg-gradient-to-r from-blue-400 to-blue-600 p-6 rounded-lg shadow-md text-white flex items-center">
               <FaDollarSign className="text-3xl mr-4" />
               <div>
-                <p className="text-lg font-semibold">Total Approved Refund Amount</p>
-                <p className="text-3xl font-bold">
+                <p className="text-lg font-semibold text-white	">Total Approved Refund Amount</p>
+                <p className="text-3xl font-bold text-white	">
                   LKR {totalApprovedAmount.toLocaleString()}
                 </p>
               </div>

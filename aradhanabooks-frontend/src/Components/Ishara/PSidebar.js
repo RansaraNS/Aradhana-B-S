@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const PSidebar = () => {
   const location = useLocation();
-
+  require('../../Pages/Ishara/tailwind.css')
   return (
     <div className="w-1/4 pr-8 border-r border-gray-200">
       <div className="flex items-center mb-8">

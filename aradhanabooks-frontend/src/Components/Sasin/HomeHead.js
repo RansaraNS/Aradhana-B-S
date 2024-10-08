@@ -18,7 +18,7 @@ const HomeHead = () => {
 
                 <div className="SR-headtitleSet2">
                     <div className="SR-topsection">
-                        <Link to="/login"><img className="SR-icon" src={usericon} alt="User Account Icon" /></Link>
+                        <Link to="/"><img className="SR-icon" src={usericon} alt="User Account Icon" /></Link>
                         <Link to="/cart"><img className="SR-icon" src={shopcart} alt="Shopping Cart Icon" /></Link>
                     </div>
                     <div className="SR-bottomsection">

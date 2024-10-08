@@ -6,6 +6,7 @@ const CardPayment = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const location = useLocation();
+  require('./tailwind.css')
 
   // Get the subtotal, shippingCharges, and total from the location state
   const { subtotal, shippingCharges, total } = location.state || { subtotal: 0, shippingCharges: 0, total: 0 };

@@ -172,7 +172,7 @@ const Orders = () => {
               backgroundColor: "#b71b5b",
             },
           }}
-          onClick={() => navigate("/app")}
+          onClick={() => navigate("/delivery")}
         >
           Dashboard
         </Button>
