@@ -48,10 +48,13 @@ router.post('/add', authenticateToken, async(req, res) => {
 });
 
 // Get all reviews
-router.get('/display', (req, res) => {
-    Review.find()
-        .then(reviews => res.json(reviews))
-        .catch(err => res.status(400).json('Error: ' + err));
+router.get('/display', async (req, res) => {
+    try {
+        const reviews = await Review.find().populate('username', 'name'); // Populate the username field with the name from Customer
+        res.json(reviews);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching reviews' });
+    }
 });
 
 // Get a specific review by ID

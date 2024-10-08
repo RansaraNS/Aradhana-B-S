@@ -119,7 +119,7 @@ export default function DisplayReviews() {
           {displayedReviews.length > 0 ? (
             displayedReviews.map((review, index) => (
               <div key={index} className="iresha-review-cardD">
-                <h4 className="iresha-review-usernameD">{review.username}</h4>
+                <h4 className="iresha-review-usernameD">{review.username.name}</h4>
                 {renderStars(review.rating)}
                 <p className="iresha-review-commentD">{review.comment}</p>
                 <p className="iresha-review-dateD">{formatDate(review.createdAt)}</p>
