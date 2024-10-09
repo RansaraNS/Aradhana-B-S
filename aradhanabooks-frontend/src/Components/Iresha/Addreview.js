@@ -101,7 +101,7 @@ const AddReview = () => {
         <div className="iresha-text-container"> 
           <h2 className="iresha-review-headingF">Submit Your Review</h2>
           <p className="iresha-review-para-messageF">Share your overall shopping experience with our system!</p>
-          <p className="iresha-review-login-messageF">Please login to write a review!</p>
+          
         </div>
         <div className="iresha-rating-containerF">
           <span className="iresha-rating-labelF">Your rating of this product:</span>

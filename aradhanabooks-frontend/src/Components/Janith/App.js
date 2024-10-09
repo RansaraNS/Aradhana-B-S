@@ -13,7 +13,6 @@ import location from '../../Images/location.png';
 import {
   Container,
   TextField,
-  Button,
   Typography,
   Table,
   TableBody,
@@ -72,9 +71,7 @@ function App() {
     setDate(newDate); // Update the date when the user selects a date from the calendar
   };
 
-  const handleItemsButtonClick = () => {
-    navigate('/items'); // Navigate to Item.js
-  };
+  
 
   return (
     <div className="App">
@@ -155,10 +152,7 @@ function App() {
             </TableContainer>
           )}
 
-          {/* Button for Items */}
-          <Button variant="contained" color="primary" onClick={handleItemsButtonClick}>
-            Items
-          </Button>
+        
 
           {/* Total Assigned Tasks Card */}
           <Card sx={{ marginBottom: '20px' }}>

@@ -130,7 +130,7 @@ const RefundsManage = () => {
           <div style={{ backgroundColor: '#0e450e' }} className="p-6 flex items-center justify-center flex-col">
             <FaUserCircle size={64} className="mb-4" />
             <h2 className="text-lg font-semibold">Aradhana Admin</h2>
-            <p className="text-sm text-white	">admin@aradhana.com</p>
+            <p className="text-sm text-white	">malitha@gmail.com</p>
           </div>
 
           {/* Navigation Links */}
@@ -164,12 +164,7 @@ const RefundsManage = () => {
           </nav>
 
           {/* Logout Section */}
-          <div style={{ backgroundColor: '#0e450e' }} className="p-4">
-            <button className="w-full flex items-center p-4 bg-red-600 hover:bg-red-500 rounded transition duration-200">
-              <FaSignOutAlt className="mr-3" />
-              Logout
-            </button>
-          </div>
+          
         </div>
 
         {/* Main Content */}

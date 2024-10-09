@@ -127,7 +127,7 @@ const Reports = () => {
               color: "#fff",
             },
           }}
-          onClick={() => navigate("/app")}
+          onClick={() => navigate("/delivery")}
         >
           Dashboard
         </Button>

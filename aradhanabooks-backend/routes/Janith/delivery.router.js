@@ -48,6 +48,45 @@ const addRider = (req, res) => {
     });
 };
 
+// Delete a rider
+const deleteRider = (req, res) => {
+  const id = req.body.id;
+  Rider.deleteOne({ id: id })
+    .then((response) => {
+      if (response.deletedCount > 0) {
+        res.json({ message: 'Rider deleted successfully', response });
+      } else {
+        res.status(404).json({ message: 'Rider not found' });
+      }
+    })
+    .catch((error) => {
+      console.error('Error deleting rider:', error);
+      res.status(500).json({ message: 'Failed to delete rider', error });
+    });
+};
+
+// Update a rider
+const updateRider = (req, res) => {
+  const { id, name, telephone, email, vehicletype, licensetype } = req.body;
+
+  Rider.findOneAndUpdate(
+    { id: id },
+    { $set: { name, telephone, email, vehicletype, licensetype } },
+    { new: true }
+  )
+    .then((response) => {
+      if (response) {
+        res.json({ message: 'Rider updated successfully', response });
+      } else {
+        res.status(404).json({ message: 'Rider not found' });
+      }
+    })
+    .catch((error) => {
+      console.error('Error updating rider:', error);
+      res.status(500).json({ message: 'Failed to update rider', error });
+    });
+};
+
 // Update task count for a rider
 const updateTaskCount = (req, res) => {
   const { id } = req.params;
@@ -92,6 +131,8 @@ const getTaskCount = (req, res) => {
 // Define the routes
 router.get('/riders', getRiders);
 router.post('/createrider', addRider);
+router.post('/updaterider', updateRider);
+router.post('/deleterider', deleteRider);
 router.put('/riders/:id/tasks', updateTaskCount); // Route for updating task count
 router.get('/riders/:id/tasks', getTaskCount); // New route for fetching task count
 

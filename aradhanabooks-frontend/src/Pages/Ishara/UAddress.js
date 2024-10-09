@@ -12,6 +12,7 @@ const UAddress = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [currentAddress, setCurrentAddress] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [phoneError, setPhoneError] = useState('');
   require('./tailwind.css')
 
   const { register, handleSubmit, reset, setError, clearErrors, formState: { errors } } = useForm();
@@ -254,19 +255,28 @@ const UAddress = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium">Phone *</label>
-                <input
-                  type="text"
-                  name="phone"
-                  {...register('phone', {
-                    required: 'Phone number is required',
-                    pattern: { value: /^[0-9]+$/, message: 'Phone number must be numeric' },
-                  })}
-                  className={`border p-2 rounded w-full mb-2 ${errors.phone ? 'border-red-500' : 'border-gray-300'}`}
-                  onChange={validatePhoneNumber}
-                />
-                {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
-              </div>
+  <label className="block text-gray-700 font-medium">Phone *</label>
+  <input
+    type="text"
+    name="phone"
+    {...register('phone', {
+      required: 'Phone number is required',
+      pattern: { value: /^[0-9]+$/, message: 'Phone number must be numeric' },
+      onBlur: (e) => {
+        const phoneNumber = e.target.value;
+        if (phoneNumber.length !== 10) {
+          setPhoneError('Enter valid phone number');
+        } else {
+          setPhoneError('');
+        }
+      }
+    })}
+    className={`border p-2 rounded w-full mb-2 ${phoneError ? 'border-red-500' : errors.phone ? 'border-red-500' : 'border-gray-300'}`}
+  />
+  {phoneError && <p className="text-red-500 text-sm">{phoneError}</p>}
+  {errors.phone && !phoneError && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+</div>
+
 
               <div>
                 <label className="block text-gray-700 font-medium">Email Address *</label>
