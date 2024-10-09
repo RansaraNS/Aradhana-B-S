@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=IBM+Plex+Sans+Devanagari:wght@300&family=K2D&family=Kanit&family=Karla:ital@0;1&family=Kdam+Thmor+Pro&family=KoHo:wght@500&family=Play:wght@700&display=swap');
+
+.AdminFoot {
+    background-color: #454745;
+    height: auto;
+    
+}
+
+.AdminFootTitle {
+    color: #FFFFFF;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    margin-left: 10%;
+    padding: 10px 0px;
+}

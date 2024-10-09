@@ -1,0 +1,108 @@
+.Chamu_reportContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../../Images/map.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.Chamu_graphContainer {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 20px;
+  background-color: #f2f2f2f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-style: dashed;
+  border-color: #0e450e;
+}
+
+.Chamu_graphHeading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #070000;
+}
+
+/* Styling for stage items */
+.Chamu_stages {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* New styles for order count display */
+.Chamu_orderCount {
+  font-size: 50px; /* Increased font size */
+  font-weight: bold; /* Bold font */
+  color: #000300; /* Dark green color for counts */
+  background-color: rgba(173, 233, 168, 0.547); /* Slightly white background */
+  padding: 10px 20px; /* Padding around the count */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.Chamu_stageItem {
+  text-align: center;
+  font-size: large;
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.Chamu_stageItem:hover {
+  transform: scale(1.14); /* Slightly enlarge the stage item on hover */
+}
+
+.Chamu_stageImage {
+  width: 100px;
+  height: 100px;
+  border: #000000;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.Chamu_stageImage:hover {
+  background-color:  rgba(173, 233, 168, 0.547);;
+}
+
+.Chamu_stageInfo {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.Chamu_viewButtonAll {
+  display: block; /* Make it a block element */
+  margin: 0 auto; /* Center horizontally */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 18px; /* Increase the font size */
+  background-color: #4CAF50; /* Change background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.Chamu_viewButtonAll:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+
+.Chamu_CusInq{
+  display: block; /* Make it a block element */
+  margin: 0 auto; /* Center horizontally */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 18px; /* Increase the font size */
+  background-color: #000000; /* Change background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.Chamu_CusInq:hover {
+  background-color: #2f4430af; /* Darker shade on hover */
+}

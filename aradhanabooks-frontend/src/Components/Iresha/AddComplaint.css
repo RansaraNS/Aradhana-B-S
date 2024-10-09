@@ -1,0 +1,147 @@
+.iresha-containerF {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+  background-color: #f8f8f8;
+  height: 145vh;  
+  flex-wrap: wrap;
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+}
+
+.iresha-form-sectionF {
+  flex: 1 1 45%;
+  margin-right: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 50%; 
+  margin-top: 20px;  
+  margin-bottom: 20px; 
+}
+
+.iresha-image-sectionF {
+  flex: 1 1 45%;
+  background-image: url('../../Images/complaintBackground.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 75%;
+  border-radius: 10px;
+  max-width: 100%; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.iresha-form-groupF {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.iresha-form-labelF {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.iresha-form-controlF {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+.iresha-form-group-selectF {
+  width: 100%;
+  padding: 12px;
+  height: 45px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.iresha-form-group-selectF:hover {
+  border-color: #26ADEB;
+}
+
+.iresha-form-group-selectF:focus {
+  outline: none;
+  border-color: #26ADEB;
+  box-shadow: 0 0 5px rgba(38, 173, 235, 0.5);
+}
+
+.iresha-form-control-desF {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  line-height: 1.5; 
+}
+
+.iresha-btnF {
+  padding: 12px 25px;
+  background-color: #0f810f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+.iresha-btnF:hover {
+  background-color: #0e450e;
+}
+
+.iresha-btnF-secondary {
+  background-color: #f04681;
+}
+
+.iresha-btn-secondaryF:hover {
+  background-color: #c21c63;
+} 
+
+@media (max-width: 1024px) {
+  .iresha-containerF {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .iresha-form-sectionF, .iresha-image-sectionF {
+    flex: 1 1 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .iresha-form-sectionF {
+    padding: 20px;
+  }
+
+  .iresha-btnF {
+    padding: 10px 20px;
+  }
+
+  .iresha-form-controlF, .iresha-form-group-selectF {
+    font-size: 14px;
+  }
+}

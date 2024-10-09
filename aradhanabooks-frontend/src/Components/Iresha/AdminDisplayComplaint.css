@@ -1,0 +1,62 @@
+ 
+.iresha-containerAD {
+    width: 1000px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;  
+    margin: 100px auto;  
+    padding: 40px;
+    background-color: #f7f7f7;
+  }
+  
+   
+  .iresha-leftAD {
+    flex: 1;   
+  }
+  
+  .iresha-headingAD {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0f810f;
+  }
+  
+   
+  .iresha-dashboardAD {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .iresha-btnAD {
+    padding: 12px 25px;
+    margin-bottom: 10px;
+    background-color: #f04681;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .iresha-btnAD:hover {
+    background-color: #c21c63;
+  }
+  
+  
+  .iresha-rightAD {
+    flex: 1;   
+    display: flex;
+    justify-content: flex-end;  
+  }
+  
+  .iresha-imageAD {
+    max-width: 100%;   
+    height: auto;
+    border-radius: 10px;   
+  }
+  

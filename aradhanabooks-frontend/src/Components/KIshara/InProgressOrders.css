@@ -1,0 +1,91 @@
+/* General container styling */
+.Chamu_inProgressOrdersContainer {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Loading and no orders text */
+.Chamu_loading,
+.Chamu_noOrders { 
+    font-size: 18px; /* Font size */
+    color: #555; /* Text color */
+    margin-top: 20px; /* Space above */
+}
+
+/* Heading style */
+.Chamu_heading {
+    text-align: center; /* Center align heading */
+    font-size: 26px; /* Font size */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Table styles */
+.Chamu_ordersTable {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Remove gaps between cells */
+    margin-bottom: 20px; /* Space below table */
+}
+
+.Chamu_tableHeader2 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px; /* Padding for header cells */
+    text-align: left; /* Align text to left */
+    height: 50px;
+}
+
+.Chamu_tableRowP:nth-child(even) {
+    background-color: #59f96156; /* Zebra striping for even rows */
+}
+.Chamu_tableRowP:nth-child(even):hover{
+    background-color: #f6efef;
+}
+.Chamu_tableCell {
+    padding: 10px; /* Padding for cells */
+    border: 1px solid #ddd; /* Cell border */
+    text-align: left; /* Align text to left */
+}
+
+/* Button styling */
+.Chamu_viewButton {
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    padding: 8px 16px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.Chamu_viewButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Count styling */
+.Chamu_count {
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Font size */
+    margin-bottom: 10px; /* Space below count */
+}
+
+/* Link styling */
+.Chamu_link {
+    text-decoration: none; /* Remove underline */
+}
+.Chamu_GeneratePDFButton{
+    margin-left: 20px;
+    background-color: #555;
+}
+.Chamu_GeneratePDFButton:hover{
+    background-color: #55555578;
+}
+.Chamu_dashboardButton{
+    background-color: #8c0b0bc6;
+}
+.Chamu_dashboardButton:hover{
+    background-color: #b94343c6;
+}

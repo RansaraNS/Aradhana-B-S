@@ -1,0 +1,80 @@
+.App {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.side-panel {
+  width: 225px;
+  background-color: #81ca81;
+  color: black;
+  padding: 0px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2px;
+}
+
+.side-panel h2 {
+  margin-top: 150px;
+  font-size: 30px;
+}
+
+.side-nav {
+  list-style-type: circle;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 10px; /* Added to lower the items */
+}
+
+.side-nav-item {
+  margin: 20px 0; /* Increased distance between items */
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease; /* Added transitions */
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.side-nav-item:hover {
+  background-color: #c21c63;
+  font-weight: bold;   /* Bold text on hover */
+  font-size: 22px;     /* Slightly bigger text on hover */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.dd {
+  margin-top: 50px; /* Adjusted for space above the image */
+  text-align: center; /* Center the image */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.side-panel-photo {
+  width: 150px;
+  height: 100px;
+  border-radius: 20%; /* Make the image circular */
+}
+
+.side-panel-photo1 {
+  width: 150px;
+  height: 100px;
+  margin-left:120px;
+  margin-bottom: 20px;
+}
+
+.jj{
+  margin-top: 80px;
+ 
+
+}
+.calendar-container {
+  margin-top: 20px;
+  margin-left: 350px;
+}
+
+/* Add other existing styles you may have */

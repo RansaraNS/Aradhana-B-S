@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=IBM+Plex+Sans+Devanagari:wght@300&family=Jura&family=K2D&family=Kanit&family=Karla:ital@0;1&family=Kdam+Thmor+Pro&family=KoHo:wght@500&family=Play:wght@700&display=swap');
+
+.SR-additemformname {
+    font-family: "Jura", sans-serif;
+    font-size: 56px;
+    margin: 1% 0%;
+    text-align: center;
+}
+
+.SR-additempage {
+    max-width: 70%;
+    height: auto;
+    background-color: #454745;
+    margin: auto;
+    margin-top: -10px;
+    border-radius: 20px;
+}
+
+.SR-additemcontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.SR-additemformtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 790px;
+    width: 350px;
+    margin-left: 2%;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #D9D9D9;
+}
+
+.SR-additemtitleimg {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 20px;
+    margin-left: 3%;
+    margin-top: 50px;
+}
+
+.SR-additemform {
+    background-color: #1D8731;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: calc(100% - 475px);
+    width: 75%;
+    box-sizing: border-box;
+    margin-right: 3.5%;
+}
+
+.SR-itemlabel {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-family: "Jura", sans-serif;
+    font-weight: 400;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.SR-itembar {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.SR-itemsubmit {
+    padding: 10px 20px;
+    background-color: #FBCE3B;
+    color: #000000;
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    font-weight: 600;
+    border: none;
+    width: 80%;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.5s ease;
+    margin-left: 12%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.SR-itemview {
+    padding: 10px 20px;
+    background-color: #105A1E;
+    color: white;
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    border: none;
+    width: 300px;
+    height: 50px;
+    margin: 0;
+    margin-left: 3%;
+    max-width: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.SR-itemview1 {
+    padding: 10px 20px;
+    background-color: #C21C63;
+    color: white;
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    border: none;
+    width: 300px;
+    height: 50px;
+    margin: 0;
+    margin-left: 3%;
+    max-width: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.SR-itemsubmit:hover {
+    color: #EF0000;
+    background-color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .SR-additemcontent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .SR-additemform {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .SR-itembar {
+        width: calc(100% - 20px);
+    }
+
+    .SR-itemsubmit {
+        width: 100%;
+        margin: 0;
+    }
+}

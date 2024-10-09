@@ -1,0 +1,127 @@
+.piyumal_wcAllDetails {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .piyumal_search_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .piyumal_search_input {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .piyumal_search_input:focus {
+    border-color: #1c6a1c;
+    background-color: #f0fff0;
+    outline: none;
+  }
+  
+  .piyumal_goback_button {
+    background-color: #0e8806;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  .piyumal_goback_button:hover {
+    background-color: #043b06;
+    transform: scale(1.05);
+  }
+  
+  .piyumal_goback_button:focus {
+    outline: none;
+  }
+  
+  /* Table Styles */
+  .piyumal__table_wcdetailssss {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .piyumal__table_wcdetailssss th,
+  .piyumal__table_wcdetailssss td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .piyumal__table_wcdetailssss th {
+    background-color: #0508069d;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  
+  .piyumal__table_wcdetailssss td {
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  /* Hover effect on table rows */
+  .piyumal__table_wcdetailssss tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* View button styling */
+  .piyumal__button-view {
+    background-color: #079a33;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .piyumal__button-view:hover {
+    background-color: #044416;
+    transform: scale(1.05);
+  }
+  
+  .piyumal__button-view:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Media queries for smaller devices */
+  @media (max-width: 768px) {
+    .piyumal_search_input {
+      width: 80%;
+    }
+  
+    .piyumal__table_wcdetailssss th,
+    .piyumal__table_wcdetailssss td {
+      padding: 10px;
+    }
+  
+    .piyumal__table_wcdetailssss {
+      width: 90%;
+    }
+  }
+  

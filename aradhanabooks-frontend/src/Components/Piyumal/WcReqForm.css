@@ -1,0 +1,151 @@
+.piyumal_wholesaleForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; 
+}
+
+.piyumal_wholesaleForm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../Images/aradhanabookslogo.png'); 
+  background-size: 75%;
+  background-position: center; 
+  filter: blur(5px); 
+  z-index: -1; 
+  background-repeat: no-repeat; 
+}
+
+
+.piyumal__form_wholesaleForm {
+  background-color: white; 
+  padding: 20px 30px; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  width: 450px; 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px; 
+  border: 4px solid #0f810f; 
+  position: relative;
+  z-index: 1; 
+}
+
+.piyumal__heading_customerForm {
+  text-align: center;
+  font-size: 1.5rem; 
+  color: white;
+  background-color: #28a745;
+  padding: 10px;
+  border-radius: 5px; 
+  margin-bottom: 20px;
+  font-family: 'Karla', sans-serif;
+}
+
+.piyumal__label_customerForm,
+.piyumal__label_email,
+.piyumal__label_customerPhone,
+.piyumal__label_CompanyName,
+.piyumal__label_customerAddress,
+.piyumal__label_customerDes {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: 'Karla', sans-serif;
+}
+
+.piyumal__input_name,
+.piyumal__input_email,
+.piyumal__input_customerPhone,
+.piyumal__input_CompanyName,
+.piyumal__input_customerAddress,
+.piyumal__input_customerDes {
+  width: 100%;
+  padding: 6px; 
+  border: 2px solid #19a152; 
+  border-radius: 8px; 
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: rgb(240, 240, 240); 
+}
+
+.piyumal__input_name:focus,
+.piyumal__input_email:focus,
+.piyumal__input_customerPhone:focus,
+.piyumal__input_CompanyName:focus,
+.piyumal__input_customerAddress:focus,
+.piyumal__input_customerDes:focus {
+  border-color: #28a745;
+  background-color: #f0fff0; 
+  outline: none;
+}
+
+.piyumal__input_customerDes {
+  height: 80px; 
+  resize: none; 
+}
+
+.piyumal__error_name,
+.piyumal__error_email,
+.piyumal__error_customerPhone,
+.piyumal__error_CompanyName,
+.piyumal__error_customerAddress,
+.piyumal__error_des {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.piyumal__button_AddCustomer {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-color: #e5e5e5;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.piyumal__button_AddCustomer:hover {
+  background-color: #218838; 
+}
+
+@media (max-width: 768px) {
+  .piyumal__form {
+    width: 90%; 
+  }
+}
+
+.piyumal__button_ViewCustomer {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #218838;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  margin-bottom: 20px;
+}
+
+.piyumal__button_ViewCustomer:hover {
+  background-color: #023802; 
+  transform: scale(1.05); 
+}
+
+.piyumal__button_ViewCustomer:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); 
+}

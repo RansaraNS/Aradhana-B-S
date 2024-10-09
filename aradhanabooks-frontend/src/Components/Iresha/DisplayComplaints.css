@@ -1,0 +1,141 @@
+ 
+.iresha-containerDis {
+  width: 1300px;
+  padding: 50px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+  background-image: url('../../Images/DisComplaint.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+ 
+.iresha-headingDis {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Jura', sans-serif;
+  color: #199919;
+}
+
+ 
+.iresha-sort-barDis {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.iresha-sort-barDis label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #004D40;
+}
+
+.iresha-sort-barDis select {
+  padding: 5px 10px;
+  border: 1px solid #004D40;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #004D40;
+  background-color: #fffbe7;
+}
+
+.iresha-sort-barDis select:focus {
+  outline: none;
+  border-color: #26ADEB;
+}
+
+ .iresha-btn-groupDis {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.iresha-btn-updateDis, .iresha-btn-deleteDis, .iresha-btn-pdfDis {
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.iresha-btn-updateDis {
+  background-color: #26ADEB;
+}
+
+.iresha-btn-deleteDis {
+  background-color: #c21c63;
+}
+
+.iresha-btn-pdfDis {
+  background-color: #0e450e;
+}
+
+ 
+.iresha-complaints-contentDis {
+  margin-top: 20px;
+}
+
+.iresha-complaint-listDis {
+  list-style-type: none;
+  padding: 0;
+}
+
+.iresha-complaint-itemDis {
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.iresha-attachmentDis {
+  width: 100px;   
+  height: 100px;   
+  object-fit: cover;   
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+ 
+.iresha-admin-replyDis {
+  background-color: #e0f7fa;
+  padding: 10px;
+  border-radius: 10px;
+}
+ 
+.iresha-dividerDis {
+  margin-top: 20px;
+  border: 1px solid #004D40;
+}
+
+ 
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pagination-buttons button {
+  background-color: #c21c63;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pagination-buttons button:disabled {
+  background-color: #9E9E9E;   
+  cursor: not-allowed;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+  background-color: #c21c63;
+}

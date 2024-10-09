@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari&family=Kdam+Thmor+Pro&family=KoHo:wght@500&family=Play:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=IBM+Plex+Sans+Devanagari:wght@300&family=Kdam+Thmor+Pro&family=KoHo:wght@500&family=Play:wght@700&display=swap');
+
+.SR-reqBarTop {
+    background-color: #454745;
+    padding: 10px;
+}
+
+.SR-reqBar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 250px;
+    margin: 20px 40px;
+    background-color: #A6E5B2;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.SR-reqBarImgBack {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    background-color: #CDEAD2;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.SR-reqBarImg {
+    width: 159px;
+    height: 160px;
+    padding: 45px;
+}
+
+.SR-reqBarTitle {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.SR-reqBarHeading {
+    margin-left: 30px;
+    font-family: "IBM Plex Sans Devanagari", sans-serif;
+    font-size: 72px;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    justify-content: center;
+    color: #36552C;
+}
+
+.SR-reqBarApplyBar {
+    justify-content: center;
+    align-items: center;
+}
+
+.SR-reqBarApply {
+    width: 550px;
+    height: 70px;
+    font-family: "Bakbak One", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    padding: 4px 160px;
+    margin-top: 0px;
+    color: #FFFFFF;
+    margin-left: 250px;
+    border-radius: 20px;
+    background-color: #EF0000;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.SR-reqBarApply:hover {
+    background-color: #FBCE3B;
+    color: #000000;
+}
+
+@media (max-width: 1024px) {
+    .SR-reqBar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .SR-reqBarImgBack {
+        width: 200px;
+        height: 200px;
+    }
+
+    .SR-reqBarHeading {
+        font-size: 72px;
+        text-align: center;
+    }
+
+    .SR-reqBarApplyBar {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .SR-reqBarApply {
+        font-size: 36px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .SR-reqBarImgBack {
+        width: 150px;
+        height: 150px;
+    }
+
+    .SR-reqBarHeading {
+        font-size: 60px;
+    }
+
+    .SR-reqBarApply {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .SR-reqBar {
+        padding: 10px;
+    }
+
+    .SR-reqBarImgBack {
+        width: 120px;
+        height: 120px;
+    }
+
+    .SR-reqBarHeading {
+        font-size: 48px;
+    }
+
+    .SR-reqBarApplyBar {
+        width: 100%;
+    }
+
+    .SR-reqBarApply {
+        font-size: 24px;
+    }
+}

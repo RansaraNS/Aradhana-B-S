@@ -1,0 +1,48 @@
+/* TrackingHomeCus.css */
+.Chamu_cus_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    background-color: #e7b1c9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .Chamu_cus_title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .Chamu_cus_description {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  .Chamu_cus_buttonHome {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #79133e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Chamu_cus_buttonHome:hover {
+    background-color: #b84475;
+  }
+  .Chamu_cus_image {
+  
+    margin-bottom: 20px; 
+  }
+  
