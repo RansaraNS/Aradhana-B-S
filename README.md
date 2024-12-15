@@ -1,5 +1,7 @@
 # Aradhana-B-S - Aradhana Books and Stationary Online Sales Management System
 
+![Artboard 1](https://github.com/user-attachments/assets/a650ebca-df1e-45db-8444-94796b474673)
+
 ## Welcome to Aradhana Books & Stationery Online Sales Management System!
 Our comprehensive web application provides a modern solution for managing the operations of **Aradhana Books & Stationery**, ensuring streamlined processes and enhanced customer engagement.
 
