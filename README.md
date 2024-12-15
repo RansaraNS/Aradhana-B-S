@@ -70,11 +70,3 @@ Ensure that **Node.js** is installed on your device. [Download Node.js here](htt
 This project was developed as part of the **Information Technology Project (IT2080)** course at **SLIIT**. Special thanks to **Aradhana Books & Stationery** for their collaboration and support throughout the development process.
 
 ---
-
-## Future Enhancements
-- **Mobile App Development**: Enhance accessibility with a mobile version of the application.
-- **AI Integration**: Implement AI for inventory optimization and sales predictions.
-- **Blockchain Integration**: Improve security for payment processing.
-- **Personalized Marketing**: Advanced loyalty programs and customer recommendations.
-
----
